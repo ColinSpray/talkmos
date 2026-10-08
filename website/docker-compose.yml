@@ -1,0 +1,21 @@
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Pulled from .env — compose reads that file for ${...} substitution
+        # and never reads .env.local. NEXT_PUBLIC_* is inlined into the client
+        # bundle during the build, so it has to be present here rather than at
+        # runtime.
+        NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL:?set NEXT_PUBLIC_API_BASE_URL in website/.env}
+    container_name: talkmos-website
+    restart: unless-stopped
+    environment:
+      # Read per request by the admin Logs page, not inlined at build time —
+      # which is why it is passed here and not as a build arg. The standalone
+      # output carries no .env file, so without this the page falls back to
+      # http://localhost:6002.
+      - GRAFANA_URL=${GRAFANA_URL:-http://localhost:6002}
+    ports:
+      - "3000:3000"

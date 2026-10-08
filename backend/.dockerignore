@@ -1,0 +1,53 @@
+# Without this file, `COPY . .` in the Dockerfile copies the build machine's
+# working tree into the image — on top of the `npm ci` that ran just before it.
+# Three separate problems, all fixed by excluding the entries below:
+#
+#   1. node_modules built on the host overwrite the ones npm ci installed.
+#      The host is glibc and the image is node:26-alpine (musl), so any native
+#      module lands in the image compiled for the wrong libc.
+#   2. .env is baked into an image layer — JWT secret, Mongo root password,
+#      Redis password, LiveKit secret. Anyone who can pull the image has them.
+#      Config is supplied at runtime via env_file, so it must not be in here.
+#   3. 556MB of node_modules plus .git for no reason.
+
+node_modules
+npm-debug.log*
+
+# Secrets — supplied at runtime, never baked into an image layer.
+#   .env         -> docker-compose `env_file`
+#   credentials/ -> docker-compose bind mount at /app/credentials:ro
+#
+# The credentials mount is not optional: src/services/fcmService.js requires
+# firebase-service-account.json at module load, so a container without it does
+# not start. If you run this image outside the compose file, mount the
+# directory (or drop the exclusion) or it will exit on boot.
+.env
+.env.*
+!.env.example
+credentials/
+*-service-account.json
+serviceAccountKey.json
+
+# VCS and CI
+.git
+.gitignore
+.github
+
+# Local runtime state
+uploads/
+logs/
+*.log
+pids/
+*.pid
+
+# Dev-only tooling
+load-test/
+.claude/
+
+# Docs and local compose config
+*.md
+docker-compose.yml
+observability/
+Dockerfile
+.dockerignore
+deploy.sh

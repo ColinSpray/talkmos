@@ -1,0 +1,1420 @@
+{
+  "@@locale": "en",
+  "commonAppName": "Talkmos",
+  "@commonAppName": {
+    "description": "Brand name — never translate, keep identical in every locale."
+  },
+  "commonCancel": "Cancel",
+  "commonSave": "Save",
+  "commonDelete": "Delete",
+  "commonEdit": "Edit",
+  "commonAdd": "Add",
+  "commonRemove": "Remove",
+  "commonRetry": "Retry",
+  "commonClose": "Close",
+  "commonDone": "Done",
+  "commonOk": "OK",
+  "commonYes": "Yes",
+  "commonNo": "No",
+  "commonSend": "Send",
+  "commonSearch": "Search",
+  "commonBlock": "Block",
+  "commonUnblock": "Unblock",
+  "commonMute": "Mute",
+  "commonUnmute": "Unmute",
+  "commonLeave": "Leave",
+  "commonAccept": "Accept",
+  "commonDecline": "Decline",
+  "commonToday": "Today",
+  "commonYesterday": "Yesterday",
+  "commonLoading": "Loading…",
+  "commonUnknown": "Unknown",
+  "commonMe": "Me",
+  "commonYou": "You",
+  "commonSettings": "Settings",
+  "commonMembers": "Members",
+  "commonMember": "Member",
+  "commonOpen": "Open",
+  "commonAdmin": "Admin",
+  "commonAdmins": "Admins",
+  "commonEveryone": "Everyone",
+  "commonSomeone": "Someone",
+  "commonSilent": "Silent",
+  "commonUsername": "Username",
+  "commonPassword": "Password",
+  "commonAbout": "About",
+  "commonPermissions": "Permissions",
+  "commonMessages": "Messages",
+  "commonCalls": "Calls",
+  "commonChat": "Chat",
+  "commonGallery": "Gallery",
+  "commonLocation": "Location",
+  "commonVideo": "Video",
+  "commonUpdateReady": "An update is ready to install.",
+  "commonUpdateRestart": "Restart",
+  "commonAddedToCall": "Adding {name} to the call…",
+  "@commonAddedToCall": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "commonPhoto": "Photo",
+  "commonVoiceMessage": "Voice message",
+  "commonAudio": "Audio",
+  "commonDocument": "Document",
+  "commonGif": "GIF",
+  "commonSticker": "Sticker",
+  "commonFriends": "Friends",
+  "commonDevices": "Devices",
+  "devicesScreenTitle": "Devices",
+  "devicesScreenBannerTitle": "Keep your account secure",
+  "devicesScreenBannerMessage": "These are the devices currently signed in to your account. If you see one you don't recognize, log it out immediately.",
+  "devicesScreenThisDevice": "This device",
+  "devicesScreenActiveNow": "Active now",
+  "devicesScreenLastActive": "Last active {date}",
+  "@devicesScreenLastActive": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "devicesScreenLoggedOutOn": "Logged out {date}",
+  "@devicesScreenLoggedOutOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "devicesScreenLogOut": "Log out",
+  "devicesScreenLogOutConfirmTitle": "Log out this device?",
+  "devicesScreenLogOutConfirmMessage": "{deviceName} will be signed out immediately.",
+  "@devicesScreenLogOutConfirmMessage": {
+    "placeholders": {
+      "deviceName": {
+        "type": "String"
+      }
+    }
+  },
+  "devicesScreenLogOutFailed": "Failed to log out device: {error}",
+  "@devicesScreenLogOutFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "devicesScreenLoggedOut": "Device logged out",
+  "devicesScreenLoadFailed": "Failed to load devices: {error}",
+  "@devicesScreenLoadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "devicesScreenNoDevices": "No devices found",
+  "commonAccount": "Account",
+  "commonNotifications": "Notifications",
+  "commonSpeaker": "Speaker",
+  "languageSettingsTitle": "Language",
+  "languageSettingsSectionHeader": "App language",
+  "languageSettingsFollowDevice": "Follow device language",
+  "languageSettingsNoticeTitle": "Translation notice",
+  "languageSettingsNoticeBody": "Some newer parts of the app may still show in English until their translations are added.",
+  "chatScreenGroupDeletedByOwner": "This group was deleted by its owner",
+  "chatScreenDeleteMessageTitle": "Delete message?",
+  "chatScreenDeleteMessagesConfirm": "Delete {count} message(s)?",
+  "@chatScreenDeleteMessagesConfirm": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "chatScreenDeleteMessagesForMeConfirm": "Delete {count} message(s) for me?",
+  "@chatScreenDeleteMessagesForMeConfirm": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "chatScreenDeleteForMe": "Delete for me",
+  "chatScreenDeleteForEveryone": "Delete for everyone",
+  "chatScreenDeleteFailed": "Failed to delete: {error}",
+  "@chatScreenDeleteFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenCallStartFailed": "Failed to start call: {error}",
+  "@chatScreenCallStartFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenMicPermissionDenied": "Microphone permission denied",
+  "chatScreenCallWhileRecording": "Stop the voice recording before starting a call",
+  "chatScreenRecordWhileInCall": "You are already on a call",
+  "chatScreenRecordingStoppedForCall": "Voice recording stopped for the call",
+  "chatHeaderOnline": "online",
+  "chatHeaderLastSeenToday": "last seen today at {time}",
+  "@chatHeaderLastSeenToday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "chatHeaderLastSeenYesterday": "last seen yesterday at {time}",
+  "@chatHeaderLastSeenYesterday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "chatHeaderLastSeenOn": "last seen {date} at {time}",
+  "@chatHeaderLastSeenOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenMessageTooShort": "Message too short",
+  "chatScreenVoiceSendFailed": "Failed to send voice message: {error}",
+  "@chatScreenVoiceSendFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenReply": "Reply",
+  "chatScreenForward": "Forward",
+  "chatScreenCopy": "Copy",
+  "chatScreenPin": "Pin",
+  "chatScreenUnpin": "Unpin",
+  "chatScreenTranslate": "Translate",
+  "chatScreenShowOriginal": "Show Original",
+  "chatScreenTranslating": "Translating…",
+  "chatScreenTranslated": "Translated",
+  "chatScreenTranslateFailed": "Couldn't translate this message. Check your connection and try again.",
+  "chatScreenDeleteUnsend": "Delete / Unsend",
+  "chatScreenCopiedToClipboard": "Copied to clipboard",
+  "chatScreenForwardedTo": "Forwarded to {name}",
+  "@chatScreenForwardedTo": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenUploadingDocument": "Uploading document...",
+  "chatScreenDocumentUploadFailed": "Document upload failed: {error}",
+  "@chatScreenDocumentUploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenContactsPermissionRequired": "Contacts permission is required to share a contact.",
+  "chatScreenShareContactFailed": "Could not share contact: {error}",
+  "@chatScreenShareContactFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenLocationPermissionRequired": "Location permission is required to share your location.",
+  "chatScreenTurnOnLocationServices": "Turn on location services to share your location.",
+  "chatScreenGettingLocation": "Getting your location...",
+  "chatScreenShareLocationFailed": "Could not share location: {error}",
+  "@chatScreenShareLocationFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenSendingItems": "Sending {count} item(s)...",
+  "@chatScreenSendingItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "chatScreenMediaUploadFailed": "Failed to upload media: {error}",
+  "@chatScreenMediaUploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenUploadingVideo": "Uploading video...",
+  "chatScreenVideoUploadFailed": "Video upload failed: {error}",
+  "@chatScreenVideoUploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenUploadFailed": "Upload failed: {error}",
+  "@chatScreenUploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "chatScreenSelectedCount": "{count} selected",
+  "@chatScreenSelectedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "chatScreenVideoCall": "Video call",
+  "chatScreenVoiceCall": "Voice call",
+  "chatScreenOriginalMessageSender": "Original Message",
+  "chatScreenOriginalMessageNotFound": "Original message not found in history",
+  "homeScreenTitle": "Chats",
+  "homeScreenArchived": "Archived",
+  "homeScreenMyStory": "My Story",
+  "homeScreenFilterAll": "All",
+  "homeScreenFilterUnread": "Unread",
+  "homeScreenFilterGroups": "Groups",
+  "homeScreenFilterChannels": "Channels",
+  "homeScreenFilterBots": "Bots",
+  "homeScreenPinChat": "Pin Chat",
+  "homeScreenUnpinChat": "Unpin Chat",
+  "homeScreenMuteNotifications": "Mute Notifications",
+  "homeScreenArchiveChat": "Archive Chat",
+  "homeScreenUnarchiveChat": "Unarchive Chat",
+  "homeScreenLeaveGroup": "Leave Group",
+  "homeScreenBlockContact": "Block Contact",
+  "homeScreenUnblockContact": "Unblock Contact",
+  "homeScreenDeleteChat": "Delete Chat",
+  "homeScreenContactNotIdentified": "Couldn't identify this contact",
+  "homeScreenBlockConfirmTitle": "Block {name}?",
+  "@homeScreenBlockConfirmTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeScreenBlockConfirmBody": "They will no longer be able to message or call you, and you won't be able to message or call them either.",
+  "homeScreenContactBlocked": "{name} blocked",
+  "@homeScreenContactBlocked": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeScreenContactUnblocked": "{name} unblocked",
+  "@homeScreenContactUnblocked": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeScreenBlockStatusUpdateFailed": "Failed to update block status: {error}",
+  "@homeScreenBlockStatusUpdateFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "homeScreenDeleteChatBody": "Delete your chat with {name}? It will reappear if a new message arrives.",
+  "@homeScreenDeleteChatBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeScreenLeaveGroupBody": "Are you sure you want to leave \"{name}\"?",
+  "@homeScreenLeaveGroupBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "homeScreenLeaveGroupFailed": "Failed to leave group",
+  "homeScreenNoChatsFound": "No chats found",
+  "homeScreenNoChatsYet": "No chats yet",
+  "homeScreenNoConversationsMatch": "No conversations match “{query}”.",
+  "@homeScreenNoConversationsMatch": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "homeScreenEmptyStateHint": "Start a conversation or create a group\nto see it here.",
+  "homeScreenSearchPeople": "Search people",
+  "createGroupScreenTitle": "Create Group",
+  "createGroupScreenNext": "Next",
+  "createGroupScreenNameLabel": "Group Name",
+  "createGroupScreenNameHint": "Enter group name",
+  "createGroupScreenDescriptionLabel": "Group Description",
+  "createGroupScreenOptional": "(Optional)",
+  "createGroupScreenDescriptionHint": "Tell people what this group is about...",
+  "createGroupScreenDescriptionHelper": "You can add a description later",
+  "createGroupScreenUploadingPhoto": "Uploading…",
+  "createGroupScreenAddPhoto": "Add group photo",
+  "createGroupScreenChangePhoto": "Change group photo",
+  "createGroupScreenPhotoUploadFailed": "Failed to upload photo: {error}",
+  "@createGroupScreenPhotoUploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "createGroupScreenEnterName": "Please enter a group name",
+  "createGroupScreenSelectAtLeastOneMember": "Select at least 1 member",
+  "createGroupScreenCreateFailed": "Failed to create group: {error}",
+  "@createGroupScreenCreateFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "createGroupScreenSelectMembers": "Select Members",
+  "createGroupScreenSelectMembersSubtitle": "Add people you want to add in this group",
+  "createGroupScreenSelectedCount": "{count} Selected",
+  "@createGroupScreenSelectedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "createGroupScreenSearchMembersHint": "Search by name, username or Talkmos ID",
+  "createGroupScreenNoContactsEmpty": "No contacts yet. Add friends to start a group.",
+  "createGroupScreenNoContactsMatch": "No contacts match \"{query}\".",
+  "@createGroupScreenNoContactsMatch": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "createGroupScreenMemberCount": "{count, plural, one{{count} Member} other{{count} Members}}",
+  "@createGroupScreenMemberCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "archivedChatsScreenTitle": "Archived",
+  "archivedChatsScreenUnarchiveChat": "Unarchive Chat",
+  "archivedChatsScreenMuteNotifications": "Mute Notifications",
+  "archivedChatsScreenLeaveGroup": "Leave Group",
+  "archivedChatsScreenDeleteChat": "Delete Chat",
+  "archivedChatsScreenDeleteChatBody": "Delete your chat with {name}? It will reappear if a new message arrives.",
+  "@archivedChatsScreenDeleteChatBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "archivedChatsScreenLeaveGroupBody": "Are you sure you want to leave \"{name}\"?",
+  "@archivedChatsScreenLeaveGroupBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "archivedChatsScreenLeaveGroupFailed": "Failed to leave group",
+  "archivedChatsScreenEmptyTitle": "No archived chats",
+  "archivedChatsScreenEmptyBody": "Chats you archive will show up here and stay out of your main list.",
+  "groupProfileScreenFailedToLoad": "Failed to load group details",
+  "groupProfileScreenImageUpdated": "Group image updated successfully!",
+  "groupProfileScreenUploadFailed": "Failed to upload group photo: {error}",
+  "@groupProfileScreenUploadFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "groupProfileScreenDescriptionUpdated": "Group description updated",
+  "groupProfileScreenDescriptionUpdateFailed": "Failed to update description",
+  "groupProfileScreenNameUpdated": "Group name updated",
+  "groupProfileScreenNameUpdateFailed": "Failed to update name",
+  "groupProfileScreenLeaveGroup": "Leave Group",
+  "groupProfileScreenLeaveGroupConfirm": "Are you sure you want to leave this group?",
+  "groupProfileScreenLeaveFailed": "Failed to leave group",
+  "groupProfileScreenDeleteGroup": "Delete Group",
+  "groupProfileScreenDeleteGroupConfirm": "This deletes the group for everyone, including its messages. This cannot be undone.",
+  "groupProfileScreenDeleteFailed": "Failed to delete group",
+  "groupProfileScreenGroupDeleted": "Group deleted",
+  "groupProfileScreenRemoveMemberTitle": "Remove Member",
+  "groupProfileScreenRemoveMemberBody": "Remove {name} from the group?",
+  "@groupProfileScreenRemoveMemberBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "groupProfileScreenMemberRemoved": "{name} removed",
+  "@groupProfileScreenMemberRemoved": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "groupProfileScreenRemoveMemberFailed": "Failed to remove member",
+  "groupProfileScreenAddMembersTitle": "Add Members",
+  "groupProfileScreenAddButtonLabel": "Add ({count})",
+  "@groupProfileScreenAddButtonLabel": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "groupProfileScreenMembersAdded": "{count, plural, one{Added {count} member} other{Added {count} members}}",
+  "@groupProfileScreenMembersAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "groupProfileScreenAddMembersFailed": "Failed to add members: {error}",
+  "@groupProfileScreenAddMembersFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "groupProfileScreenNoMoreContacts": "No more contacts to add",
+  "groupProfileScreenTitle": "Group Settings",
+  "groupProfileScreenInviteMembers": "Invite Members",
+  "groupProfileScreenPrivacy": "Privacy",
+  "groupProfileScreenEditGroupInfo": "Edit Group Info",
+  "groupProfileScreenMediaVisibility": "Media Visibility",
+  "groupProfileScreenMuteNotifications": "Mute Notifications",
+  "groupProfileScreenDangerZone": "Danger Zone",
+  "groupProfileScreenMemberCount": "{count, plural, one{{count} Member} other{{count} Members}}",
+  "@groupProfileScreenMemberCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "groupProfileScreenMembersCountTitle": "Members ({count})",
+  "@groupProfileScreenMembersCountTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "groupProfileScreenNoAdminsYet": "No admins yet.",
+  "groupProfileScreenNoMembersYet": "No members yet.",
+  "groupProfileScreenOwnerRole": "Owner",
+  "groupProfileScreenGroupNameLabel": "Group name",
+  "groupProfileScreenDescriptionLabel": "Description",
+  "mediaPreviewScreenAddTextLabelTitle": "Add Text Label",
+  "mediaPreviewScreenTypeTextHint": "Type text here...",
+  "mediaPreviewScreenFileSize": "{size}",
+  "@mediaPreviewScreenFileSize": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "mediaPreviewScreenCropImageTooltip": "Crop Image",
+  "mediaPreviewScreenRotateImageTooltip": "Rotate Image",
+  "mediaPreviewScreenAddTextTooltip": "Add Text",
+  "mediaPreviewScreenDrawDoodleTooltip": "Draw Doodle",
+  "mediaPreviewScreenUndoStrokeTooltip": "Undo last stroke",
+  "mediaPreviewScreenCaptionHint": "Add a caption…",
+  "groupPermissionsScreenSendMessagesLabel": "Send Messages",
+  "groupPermissionsScreenSendMessagesDescription": "Who can post in this group",
+  "groupPermissionsScreenEditInfoLabel": "Edit Group Info",
+  "groupPermissionsScreenEditInfoDescription": "Who can change the name, photo and description",
+  "groupPermissionsScreenAddMembersLabel": "Add Members",
+  "groupPermissionsScreenAddMembersDescription": "Who can invite people into this group",
+  "groupPermissionsScreenAdminOnlyNotice": "Only group admins can change these settings.",
+  "groupPermissionsScreenAllMembers": "All members",
+  "groupPermissionsScreenOnlyAdmins": "Only admins",
+  "groupPermissionsScreenUpdateFailed": "Could not update: {error}",
+  "@groupPermissionsScreenUpdateFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "videoPlayerScreenLoadFailed": "Failed to load video",
+  "sharedMediaScreenTitle": "Shared Media",
+  "sharedMediaScreenLoadFailed": "Could not load shared media",
+  "sharedMediaScreenEmptyTitle": "No media shared yet",
+  "sharedMediaScreenEmptyBody": "Photos and videos you send or receive\nhere will show up in this gallery.",
+  "imageViewerLoadFailed": "Failed to load image",
+  "chatBubbleEdited": "Edited",
+  "chatBubbleReadMore": "Read more",
+  "chatBubbleReadLess": "Read less",
+  "chatInputBarEditMessage": "Edit message",
+  "chatInputBarHint": "Type a message…",
+  "chatHeaderTypingLabel": "typing",
+  "contextActionMenuActionsLabel": "Actions",
+  "chatBodyPrivacyBanner": "Messages are private to this chat.",
+  "chatBodyYouBlocked": "You blocked {peerName}",
+  "@chatBodyYouBlocked": {
+    "placeholders": {
+      "peerName": {
+        "type": "String"
+      }
+    }
+  },
+  "chatBodyNoMessagesYet": "No messages yet",
+  "chatBodySayHi": "Say hi to {name} to start the conversation.",
+  "@chatBodySayHi": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "recentChatTileContactWithName": "Contact: {name}",
+  "@recentChatTileContactWithName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "recentChatTileContact": "Contact",
+  "recentChatTileTapToOpen": "Tap to open conversation",
+  "mediaVisibilityPermissionNeeded": "Talkmos needs permission to add to your gallery. You can grant it in system settings.",
+  "mediaVisibilitySheetTitle": "Media visibility",
+  "mediaVisibilitySheetDescription": "Whether photos and videos from this chat are saved to this device's gallery.",
+  "mediaVisibilitySheetFollowsGlobal": "Follows the global Save to Photos setting",
+  "wallpaperPickerNone": "None",
+  "attachmentSheetDocument": "Document",
+  "attachmentSheetCamera": "Camera",
+  "attachmentSheetContact": "Contact",
+  "forwardMessageSheetTitle": "Forward to",
+  "forwardMessageSheetNoChats": "No chats available",
+  "pinnedMessageBannerTitle": "Pinned Message",
+  "pinnedMessageBannerConfirmTitle": "Unpin message?",
+  "pinnedMessageBannerConfirmBody": "Are you sure you want to unpin this message?",
+  "pinnedMessageBannerUnpinAction": "Unpin",
+  "wizardStepHeaderStepOf": "Step {current} of {total}",
+  "@wizardStepHeaderStepOf": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "deletedMessageBody": "This message was deleted",
+  "voiceMessageFailedToPlay": "Failed to play audio",
+  "imageMessageFailedToLoad": "Failed to load image",
+  "locationMessageCurrentLocation": "Current Location",
+  "documentMessageDefaultName": "Document",
+  "documentMessageFileExtensionFallback": "FILE",
+  "documentMessageOpenFailed": "Could not open file: {reason}",
+  "@documentMessageOpenFailed": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "documentMessageDownloadFailed": "Could not download file",
+  "documentMessagePageCountOne": "1 page",
+  "documentMessagePageCount": "{count} pages",
+  "@documentMessagePageCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "completeProfileScreenTitle": "Complete your profile",
+  "completeProfileScreenSubtitle": "Tell us who you are so friends can find you.",
+  "completeProfileScreenFullName": "Full name",
+  "completeProfileScreenFullNameHint": "e.g. Alex Morgan",
+  "completeProfileScreenNameRequired": "Please enter your name",
+  "completeProfileScreenUsernameHint": "e.g. alexmorgan",
+  "completeProfileScreenUsernameMinLength": "At least 3 characters",
+  "completeProfileScreenFinish": "Finish",
+  "phoneLoginScreenSelectCountryCode": "Select Country Code",
+  "phoneLoginScreenInvalidPhone": "Please enter a valid 10-digit phone number",
+  "phoneLoginScreenSubtitle": "Login or register to start chatting",
+  "phoneLoginScreenPhoneNumberLabel": "Phone Number",
+  "phoneLoginScreenContinueWithApple": "Continue with Apple",
+  "phoneLoginScreenAppleComingSoon": "Apple sign-in coming soon",
+  "phoneLoginScreenContinueWithGoogle": "Continue with Google",
+  "phoneLoginScreenPhoneHint": "Enter phone number",
+  "phoneLoginScreenContinue": "Continue",
+  "phoneLoginScreenVerificationNote": "We will send you a verification code\nto confirm your number",
+  "phoneLoginScreenOr": "or",
+  "phoneLoginScreenAgreeTerms": "By continuing, you agree to our",
+  "phoneLoginScreenTermsOfService": "Terms of Service",
+  "phoneLoginScreenAnd": " and ",
+  "phoneLoginScreenPrivacyPolicy": "Privacy Policy",
+  "phoneConfirmationScreenSelectCountryCode": "Select Country Code",
+  "phoneConfirmationScreenInvalidPhone": "Please enter a valid 10-digit phone number",
+  "phoneConfirmationScreenPhoneHint": "Enter phone number",
+  "phoneConfirmationScreenTitle": "Confirm Your Phone Number",
+  "phoneConfirmationScreenSubtitle": "To keep your account secure and connect with your contacts, please enter your mobile number.",
+  "phoneConfirmationScreenConfirmContinue": "Confirm & Continue",
+  "otpVerificationScreenEnterCode": "Enter the verification code",
+  "otpVerificationScreenCodeResent": "Code resent successfully",
+  "otpVerificationScreenReceivedOtp": "Received OTP from Backend",
+  "otpVerificationScreenOtpFilled": "OTP filled into text field",
+  "otpVerificationScreenDirectOtpNote": "Direct OTP from server • Tap code to re-fill",
+  "otpVerificationScreenTitle": "Verify your number",
+  "otpVerificationScreenSentTo": "Enter the 6-digit code sent to {phone}",
+  "@otpVerificationScreenSentTo": {
+    "placeholders": {
+      "phone": {
+        "type": "String"
+      }
+    }
+  },
+  "otpVerificationScreenVerify": "Verify",
+  "otpVerificationScreenDidntGetCode": "Didn't get the code? ",
+  "otpVerificationScreenSending": "Sending…",
+  "otpVerificationScreenResend": "Resend",
+  "registerScreenAccountCreated": "Account created successfully!",
+  "registerScreenCreateYourPrefix": "Create your ",
+  "registerScreenAccountWord": "account",
+  "registerScreenSubtitle": "Join Talkmos and start connecting with your team and community.",
+  "registerScreenFullName": "Full Name",
+  "registerScreenFullNameHint": "Enter your full name",
+  "registerScreenNameRequired": "Name is required",
+  "registerScreenEmailAddress": "Email Address",
+  "registerScreenEmailHint": "Enter your email address",
+  "registerScreenEmailRequired": "Email is required",
+  "registerScreenEmailInvalid": "Enter a valid email address",
+  "registerScreenPasswordHint": "Enter password",
+  "registerScreenPasswordRequired": "Password is required",
+  "registerScreenPasswordMinLength": "Password must be at least 6 characters",
+  "registerScreenConfirmPassword": "Confirm Password",
+  "registerScreenConfirmPasswordHint": "Confirm password",
+  "registerScreenConfirmPasswordRequired": "Confirm password is required",
+  "registerScreenPasswordsMismatch": "Passwords do not match",
+  "registerScreenSignUp": "Sign Up",
+  "registerScreenOrContinueWith": "Or continue with",
+  "registerScreenSignInWithGoogle": "Sign In with Google",
+  "registerScreenAlreadyHaveAccount": "Already have an account? ",
+  "registerScreenSignIn": "Sign In",
+  "loginScreenWelcomeBackTo": "Welcome back to ",
+  "loginScreenSubtitle": "Log in to connect with your team and access your community.",
+  "loginScreenPhoneOrUsername": "Phone or Username",
+  "loginScreenPhoneOrUsernameHint": "+1234567890 or username",
+  "loginScreenPhoneOrUsernameRequired": "Phone or username is required",
+  "loginScreenPasswordHint": "Enter password",
+  "loginScreenPasswordRequired": "Password is required",
+  "loginScreenForgotPassword": "Forgot password?",
+  "loginScreenSignIn": "Sign In",
+  "loginScreenOrContinueWith": "Or continue with",
+  "loginScreenSignInWithGoogle": "Sign In with Google",
+  "loginScreenSignInWithPhoneOtp": "Sign In with Phone OTP",
+  "loginScreenDontHaveAccount": "Don't have an account? ",
+  "loginScreenSignUp": "Sign Up",
+  "welcomeScreenTagline": "Chat. Meet. Collaborate.",
+  "welcomeScreenDescription": "All-in-one communication platform for chats, calls, smart meetings & communities.",
+  "welcomeScreenLetsStart": "Let's Start",
+  "forgotPasswordScreenEmailRequired": "Please enter your email or phone number.",
+  "forgotPasswordScreenCodeResent": "A new code has been sent.",
+  "forgotPasswordScreenIncompleteCode": "Please enter the full 6-digit code.",
+  "forgotPasswordScreenPasswordMinLength": "Password must be at least 8 characters.",
+  "forgotPasswordScreenPasswordsMismatch": "Passwords do not match.",
+  "forgotPasswordScreenTitleEmail": "Forgot Password",
+  "forgotPasswordScreenTitleOtp": "Enter Verification Code",
+  "forgotPasswordScreenTitleNewPassword": "Set New Password",
+  "forgotPasswordScreenSubtitleEmail": "Enter your email or phone and we'll send you a verification code.",
+  "forgotPasswordScreenSubtitleOtp": "Check your inbox or messages for the 6-digit code we sent.",
+  "forgotPasswordScreenSubtitleNewPassword": "Choose a strong password you haven't used before.",
+  "forgotPasswordScreenEmailOrPhoneLabel": "Email or Phone Number",
+  "forgotPasswordScreenEmailOrPhoneHint": "name@example.com or +91...",
+  "forgotPasswordScreenSendCode": "Send Code",
+  "forgotPasswordScreenCodeSentTo": "Code sent to {email}",
+  "@forgotPasswordScreenCodeSentTo": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "forgotPasswordScreenVerifyCode": "Verify Code",
+  "forgotPasswordScreenDidntReceiveCode": "Didn't receive a code? ",
+  "forgotPasswordScreenResend": "Resend",
+  "forgotPasswordScreenNewPasswordLabel": "New Password",
+  "forgotPasswordScreenAtLeast8Chars": "At least 8 characters",
+  "forgotPasswordScreenConfirmPasswordLabel": "Confirm Password",
+  "forgotPasswordScreenReenterPassword": "Re-enter your password",
+  "forgotPasswordScreenResetPassword": "Reset Password",
+  "forgotPasswordScreenChars8Plus": "8+ chars",
+  "forgotPasswordScreenUppercase": "Uppercase",
+  "forgotPasswordScreenNumber": "Number",
+  "forgotPasswordScreenSuccessTitle": "Password Reset!",
+  "forgotPasswordScreenSuccessMessage": "Your password has been successfully updated.\nYou can now log in with your new password.",
+  "forgotPasswordScreenBackToLogin": "Back to Login",
+  "editProfileScreenUpdateSuccess": "Profile updated successfully!",
+  "editProfileScreenUploadPhotoFailed": "Failed to upload photo: {error}",
+  "@editProfileScreenUploadPhotoFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "editProfileScreenChangePhotoTitle": "Change Profile Photo",
+  "editProfileScreenChoosePhotoSubtitle": "Choose a photo to represent you",
+  "editProfileScreenCameraLabel": "Camera",
+  "editProfileScreenTakePhotoSubtitle": "Take a photo",
+  "editProfileScreenPickFromLibrarySubtitle": "Pick from library",
+  "editProfileScreenRemoveCurrentPhoto": "Remove current photo",
+  "editProfileScreenTitle": "Edit Profile",
+  "editProfileScreenBasicInfo": "Basic Info",
+  "editProfileScreenFullName": "Full Name",
+  "editProfileScreenFullNameHint": "Your display name",
+  "editProfileScreenNameEmptyError": "Name cannot be empty",
+  "editProfileScreenUsernameHint": "Unique handle others can find you by",
+  "editProfileScreenBio": "Bio",
+  "editProfileScreenBioHint": "A short line about you",
+  "editProfileScreenLocationHint": "Where you are",
+  "editProfileScreenEmail": "Email",
+  "editProfileScreenPhone": "Phone",
+  "editProfileScreenEmailPhoneNotice": "Email and phone are tied to your sign-in and can't be edited here.",
+  "editProfileScreenSaveChanges": "Save Changes",
+  "editProfileScreenUploading": "Uploading…",
+  "editProfileScreenChangePhoto": "Change photo",
+  "appearanceSettingsScreenTitle": "Appearance",
+  "appearanceSettingsScreenInterfaceTheme": "Interface Theme",
+  "appearanceSettingsScreenBrandPrimaryColor": "Brand Primary Color",
+  "appearanceSettingsScreenBrandColorDesc": "Changes the highlights and action buttons across the app.",
+  "appearanceSettingsScreenChatWallpaperStyle": "Chat Wallpaper & Style",
+  "appearanceSettingsScreenColorBackdrop": "Color Backdrop",
+  "appearanceSettingsScreenBackgroundDoodles": "Background Doodles",
+  "appearanceSettingsScreenBackgroundDoodlesDesc": "Add subtle illustrations to flat colors.",
+  "appearanceSettingsScreenWallpaperGallery": "Wallpaper Gallery",
+  "appearanceSettingsScreenThemeLight": "Light",
+  "appearanceSettingsScreenThemeDark": "Dark",
+  "appearanceSettingsScreenThemeSystem": "System",
+  "appearanceSettingsScreenImageOpacity": "Image Opacity",
+  "privacySettingsScreenTitle": "Privacy & Security",
+  "privacySettingsScreenPrivateAccountTitle": "Private account",
+  "privacySettingsScreenPrivateAccountDescPrivate": "Your account is Private. People who aren't your contacts have to send you a friend request before they can message you, call you, or see your stories.",
+  "privacySettingsScreenPrivateAccountDescPublic": "Your account is Public. Anyone on Talkmos can message you, call you, and see your stories.",
+  "privacySettingsScreenPrivacyControls": "Privacy Controls",
+  "privacySettingsScreenReadReceipts": "Read Receipts",
+  "privacySettingsScreenReadReceiptsDesc": "Let others know when you've read their messages.",
+  "privacySettingsScreenLastSeenOnline": "Last Seen & Online",
+  "privacySettingsScreenLastSeenSheetTitle": "Who can see my last seen",
+  "privacySettingsScreenProfilePhotoTitle": "Profile Photo",
+  "privacySettingsScreenProfilePhotoSheetTitle": "Who can see my profile photo",
+  "privacySettingsScreenMedia": "Media",
+  "privacySettingsScreenSaveToPhotos": "Save to Photos",
+  "privacySettingsScreenSaveToPhotosDesc": "Save photos and videos you receive to this device's gallery, where other apps can see them. Off by default. Individual chats can override this.",
+  "privacySettingsScreenBlockedContacts": "Blocked Contacts",
+  "privacySettingsScreenBlockedCountNone": "None",
+  "privacySettingsScreenBlockedCount": "{count} blocked",
+  "@privacySettingsScreenBlockedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "privacySettingsScreenLegalPolicy": "Legal & Policy",
+  "privacySettingsScreenPrivacyPolicy": "Privacy Policy",
+  "privacySettingsScreenPrivacyPolicyDesc": "How your data is handled",
+  "privacySettingsScreenTermsOfService": "Terms of Service",
+  "privacySettingsScreenTermsDesc": "The agreement you accepted at sign-up",
+  "privacySettingsScreenGalleryPermissionNeeded": "Talkmos needs permission to add to your gallery. You can grant it in system settings.",
+  "privacySettingsScreenSyncError": "Couldn't save that setting. Check your connection.",
+  "privacySettingsScreenBrowserOpenError": "Couldn't open the browser.",
+  "privacySettingsScreenConnectionSecured": "Your connection is secured",
+  "privacySettingsScreenConnectionSecuredDesc": "Messages and calls travel over an encrypted connection, and only people in a chat can open it. Messages cached on this device are encrypted at rest.",
+  "profileScreenCheckingForUpdates": "Checking for app updates...",
+  "profileScreenLatestVersion": "You are on the latest version of {appName}!",
+  "@profileScreenLatestVersion": {
+    "placeholders": {
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "profileScreenComingSoon": "{feature} coming soon!",
+  "@profileScreenComingSoon": {
+    "placeholders": {
+      "feature": {
+        "type": "String"
+      }
+    }
+  },
+  "profileScreenPrivacySecurity": "Privacy & Security",
+  "profileScreenDataAndStorage": "Data and Storage",
+  "profileScreenChatSettings": "Chat Settings",
+  "profileScreenLanguage": "Language",
+  "profileScreenHelpSupport": "Help & Support",
+  "profileScreenCheckForUpdates": "Check for Updates",
+  "profileScreenLogOut": "Log Out",
+  "profileScreenUserFallback": "User",
+  "profileScreenAccountDesc": "Manage your profile details",
+  "profileScreenPrivacySecurityDesc": "Control who can see your info",
+  "profileScreenNotificationsDesc": "Message, group and call alerts",
+  "profileScreenDataAndStorageDesc": "Manage storage and media usage",
+  "profileScreenChatSettingsDesc": "Wallpaper, themes and chat appearance",
+  "profileScreenDevicesDesc": "Manage where you're logged in",
+  "profileScreenLanguageDesc": "Change the app's language",
+  "profileScreenCheckForUpdatesDesc": "Check if a new version is available",
+  "profileScreenAboutDesc": "App info and legal details",
+  "aboutScreenTitle": "About",
+  "aboutScreenVersion": "Version {version}",
+  "@aboutScreenVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "aboutScreenLegalSectionTitle": "Legal",
+  "aboutScreenTermsOfService": "Terms of Service",
+  "aboutScreenPrivacyPolicy": "Privacy Policy",
+  "aboutScreenHelpSupportDesc": "Get help or contact us",
+  "aboutScreenBrowserOpenError": "Couldn't open the browser. Please try again.",
+  "aboutScreenCopyright": "© {year} {appName}. All rights reserved.",
+  "@aboutScreenCopyright": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      },
+      "appName": {
+        "type": "String"
+      }
+    }
+  },
+  "dataStorageSettingsScreenTitle": "Data and Storage",
+  "dataStorageSettingsScreenStorageHeader": "Storage",
+  "dataStorageSettingsScreenCachedMedia": "Cached media",
+  "dataStorageSettingsScreenClearing": "Clearing…",
+  "dataStorageSettingsScreenTapToClear": "Tap to clear",
+  "dataStorageSettingsScreenMeasuring": "Measuring…",
+  "dataStorageSettingsScreenClearingSafeTitle": "Clearing is safe",
+  "dataStorageSettingsScreenClearingSafeDesc": "Photos, videos and voice notes are re-downloaded from the server when you open them again. Your messages are stored separately and are never removed by this.",
+  "dataStorageSettingsScreenMediaUpload": "Media Upload",
+  "dataStorageSettingsScreenUploadQuality": "Upload quality",
+  "dataStorageSettingsScreenAutomaticDownloads": "Automatic Downloads",
+  "dataStorageSettingsScreenAutoSaveWifiOnly": "Auto-save over Wi-Fi only",
+  "dataStorageSettingsScreenAutoSaveWifiOnlyDesc": "Wait for Wi-Fi before saving received media to your gallery. Media you open is always downloaded, on any connection.",
+  "dataStorageSettingsScreenSaveToPhotos": "Save to Photos",
+  "dataStorageSettingsScreenOn": "On",
+  "dataStorageSettingsScreenOff": "Off",
+  "dataStorageSettingsScreenNothingAutoSavedTitle": "Nothing is being auto-saved",
+  "dataStorageSettingsScreenNothingAutoSavedDesc": "Save to Photos is off, so received media stays inside Talkmos and the Wi-Fi setting above has nothing to do yet. Individual chats can still opt in from their info page.",
+  "dataStorageSettingsScreenPhotoUploadQualityTitle": "Photo upload quality",
+  "dataStorageSettingsScreenRecommended": "Recommended",
+  "dataStorageSettingsScreenQualityDataSaverDesc": "Smallest files, softest detail",
+  "dataStorageSettingsScreenQualityStandardDesc": "Balanced — what Talkmos has always sent",
+  "dataStorageSettingsScreenQualityHighDesc": "Sharpest detail, largest files",
+  "dataStorageSettingsScreenClearCacheTitle": "Clear cached media?",
+  "dataStorageSettingsScreenClearCacheDesc": "This frees up the space cached media is using{size}. Photos, videos and voice notes will be downloaded again the next time you open them. Your messages are not affected.",
+  "@dataStorageSettingsScreenClearCacheDesc": {
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
+  },
+  "dataStorageSettingsScreenClear": "Clear",
+  "dataStorageSettingsScreenCacheCleared": "Cached media cleared",
+  "helpSupportScreenFaq1Question": "How do I pin or unpin conversations?",
+  "helpSupportScreenFaq1Answer": "Go to the recent chat list on the Home screen. Long press on any conversation card and select 'Pin Conversation' or 'Unpin Conversation' from the pop-up options sheet. Pinned chats stay anchored at the top of your list.",
+  "helpSupportScreenFaq2Question": "How do I record and send audio voice messages?",
+  "helpSupportScreenFaq2Answer": "Open any chat room. Tap and hold the mic icon in the message bar to record a voice note. The bar will show a recording duration and a cancel trigger. Releasing/sending will direct you to a premium preview page where you can review your WAV recording before sharing it.",
+  "helpSupportScreenFaq3Question": "Where can I change the chat wallpaper backgrounds?",
+  "helpSupportScreenFaq3Answer": "Navigate to your Profile tab, tap 'Appearance', and open the Chat Wallpaper customize panel. You can select custom solid backdrop colors or toggle background doodles on and off.",
+  "helpSupportScreenFaq4Question": "How does message pinning work inside chat rooms?",
+  "helpSupportScreenFaq4Answer": "Inside any chat thread, single-tap a message bubble to view details and tap the Pin button in the AppBar. Pinned messages appear in a floating banner at the top of the chat room. Tapping it automatically scrolls you directly to that message.",
+  "helpSupportScreenTicketSubmittedTitle": "Ticket Submitted",
+  "helpSupportScreenTicketSubmittedBody": "Thank you for contacting Talkmos support. Your message has been sent successfully. Our team will review your report and respond shortly.",
+  "helpSupportScreenTitle": "Help & Support",
+  "helpSupportScreenFaqHeading": "Frequently Asked Questions",
+  "helpSupportScreenSubmitTicketHeading": "Submit a Support Ticket",
+  "helpSupportScreenSubjectLabel": "Subject",
+  "helpSupportScreenSubjectHint": "e.g. Bug report, audio error",
+  "helpSupportScreenSubjectRequired": "Please enter a subject",
+  "helpSupportScreenDescriptionLabel": "Description / Message",
+  "helpSupportScreenDescriptionHint": "Tell us how we can help you...",
+  "helpSupportScreenDescriptionRequired": "Please describe your request",
+  "helpSupportScreenSubmitButton": "Submit Ticket",
+  "notificationsSettingsScreenAlertChannels": "Alert Channels",
+  "notificationsSettingsScreenReceiveNotifications": "Receive Notifications",
+  "notificationsSettingsScreenReceiveNotificationsDesc": "Get instant alerts for messages and updates.",
+  "notificationsSettingsScreenMessageSound": "Message Sound",
+  "notificationsSettingsScreenVibrationAlerts": "Vibration Alerts",
+  "notificationsSettingsScreenVibrationAlertsDesc": "Haptic feedback on every alert.",
+  "notificationsSettingsScreenMessagePreviews": "Message Previews",
+  "notificationsSettingsScreenMessagePreviewsDesc": "Show content on the lock screen.",
+  "notificationsSettingsScreenCallRingtone": "Call Ringtone",
+  "notificationsSettingsScreenAudioToneNoticeTitle": "Audio Tone Notice",
+  "notificationsSettingsScreenAudioToneNoticeDesc": "Ringtone changes take effect on the next incoming call. Some tones may sound different depending on your device.",
+  "notificationsSettingsScreenPrivateByDefaultTitle": "Private by default",
+  "notificationsSettingsScreenPrivateByDefaultDesc": "Only people in a chat can read its messages.",
+  "blockedContactsScreenTitle": "Blocked Contacts",
+  "blockedContactsScreenUnblockConfirmTitle": "Unblock {name}?",
+  "@blockedContactsScreenUnblockConfirmTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "blockedContactsScreenUnblockConfirmBody": "You will be able to message and call each other again.",
+  "blockedContactsScreenUnblockFailed": "Failed to unblock: {error}",
+  "@blockedContactsScreenUnblockFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "blockedContactsScreenEmptyTitle": "No blocked contacts",
+  "blockedContactsScreenEmptyDesc": "People you block will no longer be able to message or call you.",
+  "selectContactScreenSearchHint": "Search name, username or phone...",
+  "selectContactScreenTitle": "Select contact",
+  "selectContactScreenLoadingContacts": "Loading contacts...",
+  "selectContactScreenContactCount": "{count, plural, one{{count} contact} other{{count} contacts}}",
+  "@selectContactScreenContactCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectContactScreenNewGroup": "New group",
+  "selectContactScreenNewGroupSubtitle": "Create a new group chat",
+  "selectContactScreenNewContact": "New contact",
+  "selectContactScreenNewContactSubtitle": "Add a friend or find users",
+  "selectContactScreenContactsOnTalkmos": "Contacts on Talkmos",
+  "selectContactScreenFindContactsOnTalkmos": "Find contacts on Talkmos",
+  "selectContactScreenPermissionDeniedMessage": "Contacts permission is off, so we can't show who you already know on Talkmos.",
+  "selectContactScreenTryAgain": "Try again",
+  "selectContactScreenNoMatchingContacts": "No matching contacts",
+  "selectContactScreenNothingToShowYet": "Nothing to show yet",
+  "selectContactScreenNoPhoneContactsMatch": "No phone contacts match \"{query}\".",
+  "@selectContactScreenNoPhoneContactsMatch": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "selectContactScreenIndianNumbersOnly": "We only list Indian mobile numbers saved on this phone. Save a contact, then refresh to see them here.",
+  "selectContactScreenClearSearch": "Clear search",
+  "selectContactScreenRefreshContacts": "Refresh contacts",
+  "selectContactScreenFromYourContacts": "FROM YOUR CONTACTS",
+  "selectContactScreenInvite": "Invite",
+  "selectContactScreenAddFriendTooltip": "Add friend",
+  "selectContactScreenRequested": "Requested",
+  "selectContactScreenWantsToConnect": "Wants to connect",
+  "selectContactScreenCouldNotOpenChat": "Could not open chat: {error}",
+  "@selectContactScreenCouldNotOpenChat": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectContactScreenFriendRequestSent": "Friend request sent",
+  "selectContactScreenCouldNotSendRequest": "Could not send request: {error}",
+  "@selectContactScreenCouldNotSendRequest": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "selectContactScreenInviteMessage": "Join me on Talkmos — https://talkmos.com",
+  "selectContactScreenNoMessagingApp": "No messaging app available",
+  "selectContactScreenCouldNotOpenMessagingApp": "Could not open messaging app",
+  "selectContactScreenDefaultStatus": "Hey there! I am using Talkmos",
+  "selectContactScreenNoContactsFound": "No contacts found",
+  "selectContactScreenNoFriendsFoundMatching": "No friends found matching \"{query}\".",
+  "@selectContactScreenNoFriendsFoundMatching": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "selectContactScreenAddFriendsToStartChatting": "Add friends or search for people on Talkmos to start chatting.",
+  "selectContactScreenFindContacts": "Find Contacts",
+  "userProfileScreenStartConversationBeforeMedia": "Start a conversation before viewing shared media.",
+  "userProfileScreenStartConversationBeforeMuting": "Start a conversation before muting it.",
+  "userProfileScreenStartConversationBeforeChanging": "Start a conversation before changing this.",
+  "userProfileScreenCouldNotOpenChat": "Could not open chat: {error}",
+  "@userProfileScreenCouldNotOpenChat": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "userProfileScreenFailedToStartCall": "Failed to start call: {error}",
+  "@userProfileScreenFailedToStartCall": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "userProfileScreenMessage": "Message",
+  "userProfileScreenAudioCall": "Audio Call",
+  "userProfileScreenVideoCall": "Video Call",
+  "userProfileScreenAddFriend": "Add Friend",
+  "userProfileScreenRequested": "Requested",
+  "userProfileScreenAcceptRequest": "Accept",
+  "userProfileScreenRequestSent": "Friend request sent",
+  "userProfileScreenRequestAccepted": "Friend request accepted",
+  "userProfileScreenRequestFailed": "Could not send the request: {error}",
+  "@userProfileScreenRequestFailed": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "userProfileScreenTalkmosUsername": "Talkmos Username",
+  "userProfileScreenUsernameCopied": "Username copied",
+  "userProfileScreenPhone": "Phone",
+  "userProfileScreenPhoneNumberCopied": "Phone number copied",
+  "userProfileScreenSharedMedia": "Shared Media",
+  "userProfileScreenMuted": "Muted",
+  "userProfileScreenOn": "On",
+  "userProfileScreenMediaVisibility": "Media Visibility",
+  "userProfileScreenUnblockContact": "Unblock Contact",
+  "userProfileScreenBlockContact": "Block Contact",
+  "userProfileScreenDefaultBio": "Hey there! I am using Talkmos",
+  "userProfileScreenUnblockConfirmTitle": "Unblock {name}?",
+  "@userProfileScreenUnblockConfirmTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "userProfileScreenBlockConfirmTitle": "Block {name}?",
+  "@userProfileScreenBlockConfirmTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "userProfileScreenUnblockConfirmBody": "You will be able to message and call each other again.",
+  "userProfileScreenBlockConfirmBody": "They will no longer be able to message or call you, and you won't be able to message or call them either.",
+  "userProfileScreenUnblockedToast": "{name} unblocked",
+  "@userProfileScreenUnblockedToast": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "userProfileScreenBlockedToast": "{name} blocked",
+  "@userProfileScreenBlockedToast": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "userProfileScreenFailedToUpdateBlockStatus": "Failed to update block status: {error}",
+  "@userProfileScreenFailedToUpdateBlockStatus": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "userProfileScreenShareContact": "Share Contact",
+  "userProfileScreenContactCopiedToClipboard": "Contact copied to clipboard",
+  "activeCallScreenAddToCall": "Add to Call",
+  "activeCallScreenShareScreen": "Share Screen",
+  "activeCallScreenStopSharingScreen": "Stop Sharing",
+  "activeCallScreenNoFriendsAvailable": "No friends available to invite",
+  "activeCallScreenNoContactsAvailable": "No one available to invite",
+  "activeCallScreenCallingName": "Calling {name}…",
+  "@activeCallScreenCallingName": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "activeCallScreenConnectingVideoWith": "Connecting video with {name}...",
+  "@activeCallScreenConnectingVideoWith": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "activeCallScreenReconnecting": "Reconnecting…",
+  "activeCallScreenCameraOff": "Camera off",
+  "activeCallScreenCalling": "Calling...",
+  "activeCallScreenRinging": "Ringing...",
+  "activeCallScreenEncryptedCall": "Encrypted Call",
+  "activeCallScreenStartVideo": "Start Video",
+  "activeCallScreenStopVideo": "Stop Video",
+  "activeCallScreenMore": "More",
+  "activeCallScreenEndCall": "End Call",
+  "activeCallBannerTapToReturn": "Tap to return to call",
+  "activeCallBannerOngoingCall": "Ongoing call",
+  "friendRequestsScreenTitle": "Friend Requests",
+  "friendRequestsScreenReceivedTab": "Received",
+  "friendRequestsScreenSentTab": "Sent",
+  "friendRequestsScreenSectionSent": "Requests you've sent",
+  "friendRequestsScreenSectionReceived": "Requests you've received",
+  "friendRequestsScreenNoReceived": "No pending received requests.",
+  "friendRequestsScreenNoSent": "No pending sent requests.",
+  "friendRequestsScreenDefaultUserName": "User",
+  "friendRequestsScreenPrivacyHint": "Only accept requests from people you know and trust.",
+  "friendRequestsScreenLearnMorePrivacy": "Learn more about privacy >",
+  "friendRequestsScreenAcceptError": "Could not accept request: {error}",
+  "@friendRequestsScreenAcceptError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "friendRequestsScreenPending": "Pending",
+  "userSearchScreenPrivateAccount": "This account is private. Send a friend request to see their profile.",
+  "userSearchScreenTitle": "Find Contacts",
+  "userSearchScreenSearchHint": "Search by name, email or phone...",
+  "userSearchScreenBannerTitle": "Search users by Talkmos ID",
+  "userSearchScreenBannerSubtitle": "You can find people using their Talkmos ID",
+  "userSearchScreenEmptyPrompt": "Search for people to chat with",
+  "userSearchScreenNoResults": "No users found",
+  "userSearchScreenResultsHeader": "Search Results",
+  "userSearchScreenDefaultUserName": "User",
+  "userSearchScreenFriendStatus": "Friend",
+  "userSearchScreenPendingStatus": "Pending",
+  "userSearchScreenRequestAccepted": "Friend request accepted!",
+  "userSearchScreenRequestSent": "Friend request sent!",
+  "userSearchScreenSendRequestError": "Could not send request: {error}",
+  "@userSearchScreenSendRequestError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "callsScreenAm": "AM",
+  "callsScreenPm": "PM",
+  "callsScreenWeekdayMon": "Mon",
+  "callsScreenWeekdayTue": "Tue",
+  "callsScreenWeekdayWed": "Wed",
+  "callsScreenWeekdayThu": "Thu",
+  "callsScreenWeekdayFri": "Fri",
+  "callsScreenWeekdaySat": "Sat",
+  "callsScreenWeekdaySun": "Sun",
+  "callsScreenNoHistory": "No call history found.",
+  "callsScreenNoMissedCalls": "No missed calls.",
+  "callsScreenNoIncomingCalls": "No incoming calls.",
+  "callsScreenNoOutgoingCalls": "No outgoing calls.",
+  "callsScreenNoSearchResults": "No calls found",
+  "callsScreenOlder": "Older",
+  "callsScreenFilterAll": "All",
+  "callsScreenFilterMissed": "Missed",
+  "callsScreenFilterIncoming": "Incoming",
+  "callsScreenFilterOutgoing": "Outgoing",
+  "callsScreenDefaultUserName": "User",
+  "callsScreenCannotPlaceCallMissingDetails": "Cannot place call: User details missing",
+  "callsScreenCannotPlaceCallGroupNotFound": "Cannot place call: Group conversation not found",
+  "callsScreenCannotPlaceCallChatNotFound": "Cannot place call: Chat not found",
+  "callsScreenFailedToStartCall": "Failed to start call: {error}",
+  "@callsScreenFailedToStartCall": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "soundSelectorRowIncludedWithTalkmos": "Included with Talkmos",
+  "soundSelectorRowPhoneDefault": "Phone default",
+  "soundSelectorRowFollowPhoneTone": "Follow this phone's own tone",
+  "soundSelectorRowChooseFromDevice": "Choose from device",
+  "soundSelectorRowPickAnyTone": "Pick any tone on this phone",
+  "soundSelectorRowSilentSubtitle": "Show the notification without a sound",
+  "communityScreenJoinedSuccess": "Successfully joined community!",
+  "communityScreenJoinError": "Error joining: {error}",
+  "@communityScreenJoinError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "communityScreenDefaultName": "Community",
+  "communityScreenSearchComingSoon": "Community search coming soon!",
+  "communityScreenNotificationsComingSoon": "Notifications coming soon.",
+  "communityScreenYourCommunities": "Your communities",
+  "communityScreenDiscoverSection": "Discover",
+  "communityScreenLoadError": "Could not load communities",
+  "communityScreenNewCommunity": "New community",
+  "communityScreenUntitled": "Untitled",
+  "communityScreenAnnouncements": "Announcements",
+  "communityScreenMembersCount": "{count, plural, one{{count} member} other{{count} members}}",
+  "@communityScreenMembersCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "communityScreenNoDescription": "No description",
+  "communityScreenPreviewPhoto": "📷 Photo",
+  "communityScreenPreviewVideo": "🎥 Video",
+  "communityScreenPreviewAudio": "🎵 Audio",
+  "communityScreenPreviewFile": "📄 File",
+  "communityScreenJoinedLabel": "Joined",
+  "communityScreenJoinButton": "Join",
+  "communityScreenIntroTitle": "Introduce communities",
+  "communityScreenIntroBody": "Communities bring members together in topic-based groups, and make it easy to get relevant announcements.",
+  "communityScreenStartButton": "Start your community",
+  "communityScreenImageUploadError": "Failed to upload image: {error}",
+  "@communityScreenImageUploadError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "communityScreenCreateSuccess": "Community created successfully!",
+  "communityScreenNameLabel": "Community name",
+  "communityScreenDescriptionLabel": "Description",
+  "communityScreenCategoryLabel": "Category",
+  "communityScreenCreateButton": "Create Community",
+  "communityDetailScreenLeaveError": "Failed to leave: {error}",
+  "@communityDetailScreenLeaveError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "communityDetailScreenLeaveTitle": "Leave community?",
+  "communityDetailScreenLeaveBody": "You'll stop receiving messages from {name}.",
+  "@communityDetailScreenLeaveBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "communityDetailScreenTitle": "Community Info",
+  "communityDetailScreenShareInvite": "Share invite link",
+  "communityDetailScreenLeaveButton": "Leave Community",
+  "communityDetailScreenMembersCount": "{count, plural, one{{count} member} other{{count} members}}",
+  "@communityDetailScreenMembersCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "communityDetailScreenMembersHeader": "MEMBERS",
+  "communityDetailScreenMembersHeaderCount": "MEMBERS ({count})",
+  "@communityDetailScreenMembersHeaderCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "communityDetailScreenMembersLoadError": "Could not load members: {error}",
+  "@communityDetailScreenMembersLoadError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "createStoryScreenCameraPhoto": "Camera photo",
+  "createStoryScreenCameraVideo": "Camera video",
+  "createStoryScreenTitle": "New Status",
+  "createStoryScreenTitleWithCount": "New Status ({count})",
+  "@createStoryScreenTitleWithCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "createStoryScreenAddMoreTooltip": "Add more",
+  "createStoryScreenShare": "Share",
+  "createStoryScreenPickerTitle": "Share a photo or video status",
+  "createStoryScreenPickerSubtitle": "Pick multiple to post them all at once",
+  "createStoryScreenPhotoOption": "Photo",
+  "createStoryScreenCaptionHint": "Add a caption…",
+  "createStoryScreenAddStickerTooltip": "Add Sticker",
+  "createStoryScreenFilterTooltip": "Filter",
+  "storyViewerScreenVideoLoadError": "Failed to load video",
+  "storyViewerScreenDeleteStory": "Delete status",
+  "storyViewerScreenDeleteConfirm": "Delete this status? People who haven't seen it won't be able to.",
+  "storyViewerScreenDeleted": "Status deleted",
+  "storyViewerScreenDeleteFailed": "Could not delete this status",
+  "mainNavigationNewGroup": "New Group",
+  "mainNavigationFindContacts": "Find Contacts",
+  "mainNavigationFriendRequests": "Friend Requests",
+  "mainNavigationSavedMessages": "Saved Messages",
+  "mainNavigationLightMode": "Light Mode",
+  "mainNavigationDarkMode": "Dark Mode",
+  "mainNavigationInviteFriends": "Invite Friends",
+  "mainNavigationLogout": "Log out",
+  "mainNavigationGuest": "Guest",
+  "mainNavigationChatsTab": "Chats",
+  "privacySettingsScreenVisibilityContacts": "Contacts",
+  "privacySettingsScreenVisibilityNobody": "Nobody"
+}

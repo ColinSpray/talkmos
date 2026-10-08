@@ -1,0 +1,70 @@
+// Grafana Alloy — collects container logs and ships them to Loki.
+//
+// Alloy rather than Promtail: Promtail is end-of-life and Alloy is its
+// supported successor.
+
+logging {
+  level  = "warn"
+  format = "logfmt"
+}
+
+// Discover every running container on this host.
+discovery.docker "containers" {
+  host             = "unix:///var/run/docker.sock"
+  refresh_interval = "15s"
+}
+
+// Turn Docker metadata into the labels queries will actually filter on.
+// Keep this set small — every distinct combination is a separate stream in
+// Loki, and high-cardinality labels (container ids, request ids) are the
+// standard way to make it fall over.
+discovery.relabel "containers" {
+  targets = discovery.docker.containers.targets
+
+  rule {
+    source_labels = ["__meta_docker_container_name"]
+    regex         = "/(.*)"
+    target_label  = "container"
+  }
+
+  rule {
+    source_labels = ["__meta_docker_container_label_com_docker_compose_service"]
+    target_label  = "service"
+  }
+
+  rule {
+    source_labels = ["__meta_docker_container_log_stream"]
+    target_label  = "stream"
+  }
+}
+
+loki.source.docker "containers" {
+  host       = "unix:///var/run/docker.sock"
+  targets    = discovery.relabel.containers.output
+  labels     = { job = "docker" }
+  forward_to = [loki.process.levels.receiver]
+}
+
+// The backend prints "[INFO] message" to stdout (see src/utils/logger.js) and
+// nowhere else — there is no file sink. Lifting the level out makes
+// `{service="backend"} | level="ERROR"` possible without a substring match.
+// Lines that do not match — mongo, redis, rabbitmq, livekit — pass through
+// untouched and simply carry no level label. The optional leading-timestamp
+// group is tolerated for any service that emits one.
+loki.process "levels" {
+  stage.regex {
+    expression = "^(?:\\[(?P<ts>[^\\]]+)\\] )?\\[(?P<level>[A-Z]+)\\] (?P<msg>.*)$"
+  }
+
+  stage.labels {
+    values = { level = "" }
+  }
+
+  forward_to = [loki.write.default.receiver]
+}
+
+loki.write "default" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+}

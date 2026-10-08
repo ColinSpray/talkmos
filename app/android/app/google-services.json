@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "282430200722",
+    "project_id": "talkmos-720",
+    "storage_bucket": "talkmos-720.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282430200722:android:afb836529ca9f3fc70bf4b",
+        "android_client_info": {
+          "package_name": "com.talkmos.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282430200722-655pfefjg9tm7ugjdkl9ledcr1u4ksh9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talkmos.app",
+            "certificate_hash": "0b8ebffc8bcfc765f058d07cdbb244ecd0a2f4a9"
+          }
+        },
+        {
+          "client_id": "282430200722-rs8qae32jq09kl27b0f4hf9fvsnaov4m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCNo3WUIvv189YS1SHbD8DnLD076ydlRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282430200722-rs8qae32jq09kl27b0f4hf9fvsnaov4m.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "282430200722-0oqsm3d0dvfsvf381hdbv9c3mr41587p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.talkmos.talkmos"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

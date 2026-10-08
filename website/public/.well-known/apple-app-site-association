@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TEAMID.com.talkmos.talkmos"],
+        "paths": ["/chat/*", "/story/*", "/invite/*"]
+      }
+    ]
+  }
+}

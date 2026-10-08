@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.talkmos.app",
+      "sha256_cert_fingerprints": [
+        "2A:1C:A2:90:D8:BA:F4:1B:C9:5F:8E:37:18:76:0A:89:C9:11:C0:2A:32:D1:46:40:BF:A2:60:61:AF:E6:5F:56"
+      ]
+    }
+  }
+]

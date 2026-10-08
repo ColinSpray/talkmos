@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Keeps the bundled notification tones in release builds.
+
+  Release builds run the resource shrinker, which only sees resources reachable
+  from code or other resources. These tones are never referenced that way — the
+  notification channel resolves them at runtime from a name string
+  ("android.resource://<pkg>/raw/<name>", see NotificationSoundSetting.androidSound),
+  so the shrinker considers them unused and strips them. The channel is then
+  created pointing at a resource that no longer exists, and it plays silently —
+  while the "Phone default" / "Choose from device" options keep working because
+  those are content:// URIs the shrinker never touches.
+
+  The wildcard covers every tone in res/raw, so adding a new one doesn't
+  reintroduce the bug.
+
+  ic_stat_talkmos is here for the same reason: AndroidInitializationSettings
+  names it as a plain string, resolved at runtime with getIdentifier(), which
+  the shrinker cannot see.
+-->
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@raw/*,@drawable/ic_stat_talkmos" />

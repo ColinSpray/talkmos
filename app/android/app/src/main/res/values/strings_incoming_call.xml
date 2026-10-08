@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name_call_label">TalkMos</string>
+    <string name="incoming_call_default_name">Unknown Caller</string>
+    <string name="incoming_call_default_initial" translatable="false">?</string>
+    <string name="incoming_call_type_voice">Incoming voice call</string>
+    <string name="incoming_call_type_video">Incoming video call</string>
+    <string name="decline_label">Decline</string>
+    <string name="accept_label">Accept</string>
+    <string name="decline_call_description">Decline call</string>
+    <string name="accept_call_description">Accept call</string>
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>Talkmos</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>talkmos</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(FLUTTER_BUILD_NAME)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(FLUTTER_BUILD_NUMBER)</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Talkmos needs camera access to take photos and videos for chats and calls.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Talkmos needs microphone access for voice messages and calls.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Talkmos needs photo library access to share photos and videos in chats.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Talkmos saves photos and videos you receive to your photo library when you turn on Save to Photos.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Talkmos uses your contacts to find friends already on Talkmos and to let you share a contact in a chat.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Talkmos uses your location to share it in a chat, and to find other Talkmos users close by when you turn on Nearby. Your approximate area is used for Nearby, never your exact position, and it is never shown to anyone.</string>
+	<!-- "Always" is what lets Nearby answer a silent location request while the
+	     app is in the background. Deliberately paired with no `location`
+	     UIBackgroundMode: that mode is for continuous location updates, which
+	     this app does not do — it takes a single fix when asked and stops. -->
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allowing Talkmos to use your location always lets Nearby keep working while the app is closed, so people close by can still find you. Only your approximate area is used, never your exact position, and it is never shown to anyone.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Talkmos uses Bluetooth to route call audio to connected headsets.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Talkmos uses Bluetooth to route call audio to connected headsets.</string>
+	<!-- WebRTC gathers candidates on the local network to connect a call
+	     directly when both people are on the same Wi-Fi. -->
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Talkmos uses your local network to connect calls directly when you and the other person are on the same Wi-Fi.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.talkmos.talkmos.deeplink</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>talkmos</string>
+			</array>
+		</dict>
+		<!-- Callback the Google Sign-In SDK returns to. Must be the iOS
+		     client id reversed, and must match GIDClientID below. -->
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.talkmos.talkmos.googlesignin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.282430200722-0oqsm3d0dvfsvf381hdbv9c3mr41587p</string>
+			</array>
+		</dict>
+	</array>
+	<key>GIDClientID</key>
+	<string>282430200722-0oqsm3d0dvfsvf381hdbv9c3mr41587p.apps.googleusercontent.com</string>
+	<key>GIDServerClientID</key>
+	<string>282430200722-rs8qae32jq09kl27b0f4hf9fvsnaov4m.apps.googleusercontent.com</string>
+	<!-- audio: call media keeps flowing after the app is backgrounded.
+	     remote-notification: FCM data pushes (a call arriving) wake the app. -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>remote-notification</string>
+	</array>
+	<!-- canLaunchUrl returns false for any scheme not listed here. -->
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>tel</string>
+		<string>sms</string>
+		<string>mailto</string>
+		<string>http</string>
+		<string>https</string>
+	</array>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict>
+			<key>UIWindowSceneSessionRoleApplication</key>
+			<array>
+				<dict>
+					<key>UISceneClassName</key>
+					<string>UIWindowScene</string>
+					<key>UISceneConfigurationName</key>
+					<string>flutter</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Main</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+</dict>
+</plist>

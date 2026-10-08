@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Night-sky base with a soft brand-purple bloom sitting behind the avatar,
+     so the middle of the screen reads as lit rather than as a flat panel. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="#16203A"
+                android:centerColor="#0D1526"
+                android:endColor="#070C17" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:centerX="0.5"
+                android:centerY="0.34"
+                android:gradientRadius="72%p"
+                android:startColor="#4D6852D6"
+                android:centerColor="#1A6852D6"
+                android:endColor="#006852D6" />
+        </shape>
+    </item>
+</layer-list>

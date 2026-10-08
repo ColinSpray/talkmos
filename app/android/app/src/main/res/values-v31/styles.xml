@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- API 31+ ignores windowBackground for the launch screen and shows the
+         system splash instead, so it has to be configured through these
+         attributes to keep the handoff to SplashScreen seamless.
+
+         A -night-v31 twin of this file exists because -v31 outranks -night in
+         resource resolution: without it, dark-mode devices on Android 12+ would
+         fall through to this file and pick up the light parent theme.
+         @color/splash_background still resolves per configuration in both. -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowSplashScreenBackground">@color/splash_background</item>
+        <!-- The same composition as the adaptive launcher icon — full-bleed, so
+             the system's circular mask cuts through artwork instead of through an
+             edge — but cut for the 288dp canvas the splash actually draws into.
+             Pointing this at @mipmap/ic_launcher is geometrically right and looks
+             right, but makes the system upscale a 108dp launcher asset by 2.67x
+             and it arrives visibly soft. -->
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>
+        <!-- Static image, so there is nothing to wait for. -->
+        <item name="android:windowSplashScreenAnimationDuration">0</item>
+    </style>
+</resources>

@@ -1,0 +1,61 @@
+auth_enabled: false
+
+server:
+  http_listen_port: 3100
+  grpc_listen_port: 9096
+  # Loki's own logs are noisy at info and would be a meaningful share of what
+  # it ends up storing about itself.
+  log_level: warn
+
+common:
+  instance_addr: 127.0.0.1
+  path_prefix: /loki
+  storage:
+    filesystem:
+      chunks_directory: /loki/chunks
+      rules_directory: /loki/rules
+  replication_factor: 1
+  ring:
+    kvstore:
+      store: inmemory
+
+schema_config:
+  configs:
+    - from: 2024-01-01
+      store: tsdb
+      object_store: filesystem
+      schema: v13
+      index:
+        prefix: index_
+        period: 24h
+
+limits_config:
+  # Without a retention period Loki keeps everything forever, which is the
+  # same unbounded-disk problem the app's own app.log had.
+  retention_period: 336h  # 14 days
+  # A restarting container can replay recent lines; accept them rather than
+  # dropping them for being older than the default 1h window.
+  reject_old_samples: true
+  reject_old_samples_max_age: 24h
+  # Bounds a single chatty container's ability to crowd out the others.
+  ingestion_rate_mb: 8
+  ingestion_burst_size_mb: 16
+  max_query_series: 2000
+
+compactor:
+  working_directory: /loki/compactor
+  # retention_enabled has no effect without a delete_request_store — the
+  # retention_period above is silently ignored if this is left out.
+  delete_request_store: filesystem
+  retention_enabled: true
+  compaction_interval: 10m
+  retention_delete_delay: 2h
+
+ruler:
+  storage:
+    type: local
+    local:
+      directory: /loki/rules
+
+analytics:
+  reporting_enabled: false

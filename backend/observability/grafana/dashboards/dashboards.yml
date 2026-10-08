@@ -1,0 +1,15 @@
+apiVersion: 1
+
+providers:
+  - name: talkmos
+    orgId: 1
+    folder: Talkmos
+    type: file
+    # The files are the source of truth; edits made in the UI are overwritten
+    # on the next reload. Use "Save As" for scratch dashboards.
+    disableDeletion: false
+    allowUiUpdates: false
+    updateIntervalSeconds: 30
+    options:
+      path: /etc/grafana/provisioning/dashboards/json
+      foldersFromFilesStructure: false

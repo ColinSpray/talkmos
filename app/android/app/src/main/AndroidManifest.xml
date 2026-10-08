@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ── Existing Permissions ──────────────────────────────────────────────── -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+
+    <!-- ── Call Notification (FSI) Permissions ───────────────────────────────── -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Android 14+ refuses to hand MediaProjection a capture session
+         without this — see ScreenShareForegroundService.kt. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+    <!-- Keeps a call running when the app is swiped out of recents — see
+         CallForegroundService.kt for why the type is microphone. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- Matching the phone book against Talkmos accounts on the Contacts tab. -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- Sharing the sender's current location in a chat message, and the
+         coarse position Nearby uses to work out who is close by. Only while
+         the app is open: Nearby stops updating when it is not, rather than
+         asking for background location, which Play treats as sensitive. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:label="TalkMos"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+
+        <!-- ── FCM notification channel ──────────────────────────────────────
+             Deliberately no `default_notification_channel_id`. Message pushes
+             are data-only, so the OS never draws one itself — MessageNotifier
+             does, on a channel keyed to the tone the user picked. A default
+             channel here would only ever apply to a notification the OS drew
+             on its own, which by design can't follow that choice.
+
+             It previously pointed at "talkmos_messages", which stopped
+             existing once channel ids became "talkmos_messages_<soundKey>". -->
+
+        <!-- The status-bar icon is masked down to its alpha and painted white,
+             so it has to be a transparent glyph. @mipmap/ic_launcher is opaque
+             and would show up as a plain white square. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_talkmos" />
+
+        <!-- ── Main Activity (Normal App - No LockScreen Overlay) ───────────── -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:taskAffinity=""
+            android:theme="@style/LaunchTheme"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize"
+            android:supportsPictureInPicture="true">
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+            <!-- ── Deep links: talkmos://chat|story|invite/<id> ─────────────────
+                 Custom-scheme fallback — works even without domain
+                 verification, e.g. links shared inside other apps or QR codes. -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="talkmos"/>
+            </intent-filter>
+
+            <!-- ── App Links: https://talkmos.com/chat|story|invite/<id> ────────
+                 autoVerify requires https://talkmos.com/.well-known/assetlinks.json
+                 to list this app's signing certificate SHA-256 fingerprint —
+                 without a verified match, Android falls back to showing the
+                 usual chooser instead of opening the app directly. -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="talkmos.com"
+                    android:pathPrefix="/chat"/>
+                <data
+                    android:scheme="https"
+                    android:host="talkmos.com"
+                    android:pathPrefix="/story"/>
+                <data
+                    android:scheme="https"
+                    android:host="talkmos.com"
+                    android:pathPrefix="/invite"/>
+            </intent-filter>
+        </activity>
+
+        <!-- ── Dedicated Kotlin Call Activity (LockScreen Overlay) ──────────── -->
+        <activity
+            android:name=".CallActivity"
+            android:exported="true"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity="com.talkmos.app.call"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" />
+
+        <!-- ── Call foreground service ────────────────────────────────────────
+             Holds the process (and with it the cached Flutter engine) up for
+             the length of a call, so swiping the app away no longer hangs up.
+             stopWithTask is left at its default of false on purpose: that is
+             exactly the case this exists for. -->
+        <service
+            android:name=".CallForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="microphone" />
+
+        <!-- ── Screen-share foreground service ────────────────────────────────
+             Exists only to satisfy Android 14+'s requirement that a
+             foreground service of this type already be running before
+             MediaProjection will hand over a capture session — see
+             ScreenShareForegroundService.kt. -->
+        <service
+            android:name=".ScreenShareForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection" />
+
+        <!-- ── Notification action receiver ─────────────────────────────────
+             Required for notification actions declared with
+             showsUserInterface: false (our call "Decline"). Those are
+             delivered as broadcasts, and flutter_local_notifications does NOT
+             register this receiver in its own manifest — without it the
+             broadcast goes nowhere and the button silently does nothing. -->
+        <receiver
+            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+            android:exported="false" />
+
+        <!-- ── Flutter embedding metadata ───────────────────────────────────── -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+
+        <!-- ── image_cropper's native crop UI ────────────────────────────────
+             Required by the image_cropper plugin; not registered by the
+             plugin's own manifest, so it has to be declared here. -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Talkmos.Cropper"/>
+
+    </application>
+
+    <!-- Required to query activities that can process text -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.PROCESS_TEXT"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+    </queries>
+</manifest>

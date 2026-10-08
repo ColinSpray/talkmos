@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is off -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!-- Show a splash screen on the activity. Automatically removed when
+             the Flutter engine draws its first frame -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+    </style>
+    <!-- Theme applied to the Android Window as soon as the process has started.
+         This theme determines the color of the Android Window while your
+         Flutter UI initializes, as well as behind your Flutter UI while its
+         running.
+
+         This Theme is only used starting with V2 of Flutter's Android embedding. -->
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <!-- The splash colour rather than ?android:colorBackground: this is what
+             fills the window in the gap between the launch screen going away and
+             Flutter's first frame, so it has to match SplashScreen too. -->
+        <item name="android:windowBackground">@color/splash_background</item>
+    </style>
+    <!-- image_cropper's UCropActivity extends AppCompatActivity and needs a
+         Theme.AppCompat descendant — the ucrop AAR doesn't ship one of its own
+         (older docs reference a "Ucrop.CropTheme" that no longer exists in the
+         current artifact), and this app otherwise has no AppCompat theme at all.
+
+         DayNight so the chrome AndroidUiSettings doesn't cover (list rows,
+         dividers, ripples) tracks the same light/dark switch as the colors
+         set at call time in image_edit_utils.dart, instead of being pinned
+         to one mode. -->
+    <style name="Theme.Talkmos.Cropper" parent="Theme.AppCompat.DayNight.NoActionBar" />
+</resources>

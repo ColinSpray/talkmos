@@ -1,0 +1,34 @@
+# LiveKit server configuration for Talkmos calling (self-hosted).
+#
+# Generate a real key/secret pair with:
+#   docker run --rm livekit/livekit-server generate-keys
+# then put the SAME key/secret into the backend .env as
+# LIVEKIT_API_KEY / LIVEKIT_API_SECRET.
+
+# WebSocket / HTTP signalling port (clients connect here).
+port: 7880
+
+rtc:
+  # TCP fallback for media when UDP is blocked.
+  tcp_port: 7881
+  # UDP media port range — open these in the firewall / security group.
+  port_range_start: 50000
+  port_range_end: 50200
+  # Advertise the server's public IP in ICE candidates (set for a cloud VM
+  # behind NAT). If the host binds the public IP directly you can leave
+  # use_external_ip: true and LiveKit will auto-detect it.
+  use_external_ip: true
+
+# API key : secret pairs the server accepts. MUST match the backend .env.
+keys:
+  APIhnCMGf7nqKlp: Sn_CvabRnYsv9VCiE4Wz7qRmlLJLeoCdDim4tlPxjTw
+
+# Optional: LiveKit can also run an embedded TURN server (replaces coturn).
+# turn:
+#   enabled: true
+#   domain: your-domain.com
+#   tls_port: 5349
+#   udp_port: 3478
+
+logging:
+  level: info

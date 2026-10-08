@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launch screen for API < 31. Draws the same logo at the same size and on the
+     same background as SplashScreen, so Flutter's first frame lands on top of an
+     identical picture and the animation appears to start from the launch screen
+     itself. launch_logo is generated at _logoSize (splash_screen.dart) per
+     density — regenerate it if that constant changes. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_background" />
+
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/launch_logo" />
+    </item>
+</layer-list>

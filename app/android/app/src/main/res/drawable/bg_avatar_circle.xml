@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The avatar disc. Lit from the top-left so it reads as a raised object
+     against the flat backdrop rather than a pasted-on swatch. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:angle="315"
+        android:startColor="#8B77F0"
+        android:endColor="#5B45C4"
+        android:type="linear" />
+    <stroke
+        android:width="2dp"
+        android:color="#33FFFFFF" />
+</shape>

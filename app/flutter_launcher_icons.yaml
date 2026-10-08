@@ -1,0 +1,49 @@
+# Regenerating icons is three steps, in this order:
+#
+#   python3 tool/build_icons.py       # sources, from assets/images/logo.png
+#   dart run flutter_launcher_icons   # this file
+#   python3 tool/icons_to_mipmap.py   # adaptive layers drawable-* -> mipmap-*
+#
+# The last step is needed because flutter_launcher_icons hardcodes drawable-* for
+# the adaptive layers, and launcher artwork belongs in mipmap so it survives
+# density-based APK splitting. Skipping it leaves the layers where they can be
+# stripped out from under the icon that references them.
+flutter_launcher_icons:
+  # Fallback only — both platforms override it below. The raw logo is a circle
+  # with transparent corners, which is wrong for either target: Android 8+ gives
+  # it "legacy treatment" (shrunk onto a plate) and iOS flattens the corners to
+  # background_color_ios and then rounds the result, leaving a black tile with a
+  # small circle floating in it.
+  image_path: "assets/images/logo.png"
+
+  android: "ic_launcher"
+  # API < 26, where the launcher draws the PNG as-is: the adaptive layers
+  # recomposed into the brand circle, so old launchers match newer ones.
+  image_path_android: "assets/icon/icon_android.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+
+  # Adaptive icon layers, for API 26+. Without these the app ships a legacy icon
+  # only, and Android 8+ shrinks and pads it onto a background plate — which is
+  # why it looked small next to other apps, and why the Android 12+ system splash
+  # rendered it small too.
+  #
+  # The layers come from isolating the logo's white glyph and synthesising the
+  # brand gradient behind it, so the artwork stays full-bleed under every mask
+  # shape instead of sitting in a padded circle. The foreground is pre-composed
+  # at the size it should end up, hence inset 0.
+  adaptive_icon_background: "assets/icon/adaptive_background.png"
+  adaptive_icon_foreground: "assets/icon/adaptive_foreground.png"
+  adaptive_icon_foreground_inset: 0
+  # Android 13+ themed icons; the system tints this by its alpha. Deliberately
+  # the same file as the foreground — the silhouette is identical, and shipping
+  # it twice put five byte-identical PNGs in the APK. icons_to_mipmap.py collapses
+  # the generated copies down to one drawable afterwards.
+  adaptive_icon_monochrome: "assets/icon/adaptive_foreground.png"
+
+  ios: true
+  # Full-bleed square with no transparency: iOS masks to a rounded rect itself.
+  image_path_ios: "assets/icon/icon_ios.png"
+  remove_alpha_ios: true
+  # Nothing left to flatten now that the iOS source is opaque, but iOS rejects
+  # alpha outright so the guard stays.
+  background_color_ios: "#000000"

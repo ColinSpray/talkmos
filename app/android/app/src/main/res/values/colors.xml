@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Must stay identical to AppTheme.lightBg, which SplashScreen paints as
+         its own background. Any difference here shows up as a flash between the
+         native launch screen and Flutter's first frame. -->
+    <color name="splash_background">#FFFFFFFF</color>
+</resources>

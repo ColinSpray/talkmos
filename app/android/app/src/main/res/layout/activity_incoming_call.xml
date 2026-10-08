@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The over-the-lock-screen ringing UI (CallActivity). Deliberately mirrors
+     the Flutter ActiveCallScreen — same purple-on-navy palette, same breathing
+     ring around the avatar — so answering a call doesn't hand the user off to
+     a screen that looks like a different app. -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_call_screen_gradient"
+    android:fitsSystemWindows="true"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="24dp">
+
+    <!-- App label -->
+    <TextView
+        android:id="@+id/tvAppLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:alpha="0.85"
+        android:letterSpacing="0.28"
+        android:text="@string/app_name_call_label"
+        android:textAllCaps="true"
+        android:textColor="#8B9AB8"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- Caller info, centred in whatever is left between the app label and the
+         action row rather than in the window — on a short screen the avatar
+         block and the buttons would otherwise overlap. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/actionRow"
+        android:layout_below="@id/tvAppLabel"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Avatar, with two sonar rings expanding out from behind it. Sized
+             for the rings at full scale so the pulse never clips. -->
+        <FrameLayout
+            android:layout_width="224dp"
+            android:layout_height="224dp"
+            android:clipChildren="false">
+
+            <View
+                android:id="@+id/pulseRingOne"
+                android:layout_width="132dp"
+                android:layout_height="132dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_avatar_pulse" />
+
+            <View
+                android:id="@+id/pulseRingTwo"
+                android:layout_width="132dp"
+                android:layout_height="132dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_avatar_pulse" />
+
+            <FrameLayout
+                android:layout_width="132dp"
+                android:layout_height="132dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_avatar_circle"
+                android:elevation="10dp">
+
+                <TextView
+                    android:id="@+id/tvAvatarInitial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/incoming_call_default_initial"
+                    android:textColor="#FFFFFF"
+                    android:textSize="48sp" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <!-- Caller Name -->
+        <TextView
+            android:id="@+id/tvCallerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/incoming_call_default_name"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp" />
+
+        <!-- Call type pill -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_call_type_pill"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="14dp"
+            android:paddingTop="7dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="7dp">
+
+            <ImageView
+                android:id="@+id/ivCallTypeIcon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_call_answer"
+                android:tint="#4ADE80" />
+
+            <TextView
+                android:id="@+id/tvCallType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.02"
+                android:text="@string/incoming_call_type_voice"
+                android:textColor="#CBD5E1"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Actions -->
+    <LinearLayout
+        android:id="@id/actionRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btnDecline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/decline_call_description"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:background="@drawable/bg_button_decline"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_call_hangup" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:letterSpacing="0.04"
+                android:text="@string/decline_label"
+                android:textColor="#94A3B8"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnAccept"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/accept_call_description"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/btnAcceptCircle"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:background="@drawable/bg_button_accept"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_call_answer" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:letterSpacing="0.04"
+                android:text="@string/accept_label"
+                android:textColor="#94A3B8"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

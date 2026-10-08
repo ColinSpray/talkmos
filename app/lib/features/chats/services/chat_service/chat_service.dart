@@ -1,0 +1,47 @@
+import 'dart:convert';
+import 'package:flutter/foundation.dart';
+import 'package:http/http.dart' as http;
+import 'package:http_parser/http_parser.dart';
+import '../../../../core/config/api_endpoints.dart';
+import '../../../../core/services/http_service.dart';
+import '../../../../core/services/token_manager.dart';
+import '../../../../models/chat_message_model.dart';
+import '../../../../models/community_model.dart';
+import '../../../../models/shared_media_item.dart';
+
+part 'parse_response.dart';
+part 'get_dashboard.dart';
+part 'get_conversations.dart';
+part 'create_conversation.dart';
+part 'generate_direct_chat_id.dart';
+part 'get_conversation_details.dart';
+part 'update_conversation.dart';
+part 'update_group_permissions.dart';
+part 'leave_conversation.dart';
+part 'delete_conversation.dart';
+part 'set_conversation_preferences.dart';
+part 'add_members.dart';
+part 'remove_member.dart';
+part 'get_messages.dart';
+part 'get_shared_media.dart';
+part 'send_message.dart';
+part 'mark_read.dart';
+part 'mark_delivered.dart';
+part 'react_to_message.dart';
+part 'star_message.dart';
+part 'delete_message.dart';
+part 'upload_media.dart';
+part 'upload_file_to_cloud.dart';
+part 'get_communities.dart';
+part 'create_community.dart';
+part 'join_community.dart';
+part 'leave_community.dart';
+part 'get_community_members.dart';
+part 'get_community_preview.dart';
+part 'create_event.dart';
+part 'get_events.dart';
+part 'create_meeting.dart';
+part 'get_pinned_messages.dart';
+part 'toggle_pin_message.dart';
+
+class ChatService {}

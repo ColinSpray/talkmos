@@ -1,4 +1,4 @@
-package com.talkmos.app
+package com.talkmos.apps
 
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -37,16 +37,16 @@ class MainActivity : FlutterActivity() {
         private const val SELECT_NOTIFICATION = "SELECT_NOTIFICATION"
         private const val NOTIFICATION_PAYLOAD_EXTRA = "payload"
 
-        private const val CALL_ACTIVITY_CHANNEL = "com.talkmos.app/call_activity"
-        private const val CALL_EVENTS_CHANNEL = "com.talkmos.app/call_events"
-        private const val RINGTONE_CHANNEL = "com.talkmos.app/ringtone"
-        private const val PIP_CHANNEL = "com.talkmos.app/pip"
-        private const val SCREEN_SHARE_CHANNEL = "com.talkmos.app/screen_share"
-        private const val CALL_SERVICE_CHANNEL = "com.talkmos.app/call_service"
-        private const val DEVICE_ID_CHANNEL = "com.talkmos.app/device_id"
-        private const val KEEP_AWAKE_CHANNEL = "com.talkmos.app/keep_awake"
-        private const val PROXIMITY_CHANNEL = "com.talkmos.app/proximity"
-        private const val FSI_CHANNEL = "com.talkmos.app/full_screen_intent"
+        private const val CALL_ACTIVITY_CHANNEL = "com.talkmos.apps/call_activity"
+        private const val CALL_EVENTS_CHANNEL = "com.talkmos.apps/call_events"
+        private const val RINGTONE_CHANNEL = "com.talkmos.apps/ringtone"
+        private const val PIP_CHANNEL = "com.talkmos.apps/pip"
+        private const val SCREEN_SHARE_CHANNEL = "com.talkmos.apps/screen_share"
+        private const val CALL_SERVICE_CHANNEL = "com.talkmos.apps/call_service"
+        private const val DEVICE_ID_CHANNEL = "com.talkmos.apps/device_id"
+        private const val KEEP_AWAKE_CHANNEL = "com.talkmos.apps/keep_awake"
+        private const val PROXIMITY_CHANNEL = "com.talkmos.apps/proximity"
+        private const val FSI_CHANNEL = "com.talkmos.apps/full_screen_intent"
         private const val RINGTONE_PICKER_REQUEST = 4711
         private const val SCREEN_SHARE_START_TIMEOUT_MS = 5_000L
 
@@ -60,7 +60,7 @@ class MainActivity : FlutterActivity() {
         // buttons (see buildPipActions()) — Android delivers a tap on one
         // of those by firing the RemoteAction's PendingIntent, which is this
         // same-app broadcast carrying which button was pressed.
-        private const val PIP_ACTION_INTENT = "com.talkmos.app.PIP_ACTION"
+        private const val PIP_ACTION_INTENT = "com.talkmos.apps.PIP_ACTION"
         private const val PIP_ACTION_EXTRA = "pip_action"
         private const val PIP_ACTION_MUTE = "mute"
         private const val PIP_ACTION_SPEAKER = "speaker"

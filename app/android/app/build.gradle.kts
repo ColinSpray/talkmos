@@ -4,6 +4,7 @@ plugins {
     id("com.android.application")
     // START: FlutterFire Configuration
     id("com.google.gms.google-services")
+    id("com.google.firebase.firebase-perf")
     id("com.google.firebase.crashlytics")
     // END: FlutterFire Configuration
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
@@ -19,7 +20,7 @@ val keyProperties = Properties().apply {
 }
 
 android {
-    namespace = "com.talkmos.app"
+    namespace = "com.talkmos.apps"
     // Compiled against the highest SDK any plugin needs — they are backward
     // compatible, and building lower fails outright: permission_handler_android
     // references API 37 constants (ACCESS_LOCAL_NETWORK), livekit_client needs
@@ -37,7 +38,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.talkmos.app"
+        applicationId = "com.talkmos.apps"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

@@ -10,10 +10,10 @@ export const APP_CONFIG = {
     privacyEmail: "privacy@talkmos.com",
     address: "Kolkata, West Bengal, India",
   },
-  playStoreUrl: "https://play.google.com/store/apps/details?id=com.talkmos.app",
+  playStoreUrl: "https://play.google.com/store/apps/details?id=com.talkmos.apps",
   apkDownloadUrl: "https://stage-api.talkmos.com/api/v1/apk/download",
   apkSize: "66 MB",
-  packageName: "com.talkmos.app",
+  packageName: "com.talkmos.apps",
   appVersion: "2.4.0",
   lastUpdated: "July 28, 2026",
 };

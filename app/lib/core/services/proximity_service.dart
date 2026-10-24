@@ -10,7 +10,7 @@ class ProximityService {
   static final ProximityService instance = ProximityService._();
 
   static const MethodChannel _channel = MethodChannel(
-    'com.talkmos.app/proximity',
+    'com.talkmos.apps/proximity',
   );
 
   bool _enabled = false;

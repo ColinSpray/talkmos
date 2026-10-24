@@ -68,7 +68,7 @@ class MessageNotifier {
 
   /// Bundles every chat notification under one group, so several
   /// conversations stack instead of competing for the shade.
-  static const String _groupKey = 'com.talkmos.app.MESSAGES';
+  static const String _groupKey = 'com.talkmos.apps.MESSAGES';
 
   static const int _summaryId = 991200;
 

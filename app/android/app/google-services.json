@@ -1,45 +1,53 @@
 {
   "project_info": {
-    "project_number": "282430200722",
-    "project_id": "talkmos-720",
-    "storage_bucket": "talkmos-720.firebasestorage.app"
+    "project_number": "383040801916",
+    "project_id": "new-talkmos",
+    "storage_bucket": "new-talkmos.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:282430200722:android:afb836529ca9f3fc70bf4b",
+        "mobilesdk_app_id": "1:383040801916:android:ba862afe5821393de3cdf9",
         "android_client_info": {
-          "package_name": "com.talkmos.app"
+          "package_name": "com.talkmos.apps"
         }
       },
       "oauth_client": [
         {
-          "client_id": "282430200722-655pfefjg9tm7ugjdkl9ledcr1u4ksh9.apps.googleusercontent.com",
+          "client_id": "383040801916-6d1pflabooodut9defkfbjef5jasghkl.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.talkmos.app",
-            "certificate_hash": "0b8ebffc8bcfc765f058d07cdbb244ecd0a2f4a9"
+            "package_name": "com.talkmos.apps",
+            "certificate_hash": "158204f729096d2da173e2a8072d0796a7ceee29"
           }
         },
         {
-          "client_id": "282430200722-rs8qae32jq09kl27b0f4hf9fvsnaov4m.apps.googleusercontent.com",
+          "client_id": "383040801916-n7v1c6ef6b7sekm68f27bhh385jmestc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talkmos.apps",
+            "certificate_hash": "3fa6574d20384d1958b8e2aece54657f57a0ce2e"
+          }
+        },
+        {
+          "client_id": "383040801916-ojkem35tcjb9d47568lh875o7f5h0sho.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCCNo3WUIvv189YS1SHbD8DnLD076ydlRI"
+          "current_key": "AIzaSyAXO2mE2OBiEPDjZFntekW63HGEcJNcSZY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "282430200722-rs8qae32jq09kl27b0f4hf9fvsnaov4m.apps.googleusercontent.com",
+              "client_id": "383040801916-ojkem35tcjb9d47568lh875o7f5h0sho.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "282430200722-0oqsm3d0dvfsvf381hdbv9c3mr41587p.apps.googleusercontent.com",
+              "client_id": "383040801916-doqs6un4g349gumia6kh1jkm90ntv8ap.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
                 "bundle_id": "com.talkmos.talkmos"

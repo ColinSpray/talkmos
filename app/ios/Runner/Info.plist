@@ -69,14 +69,14 @@
 			<string>com.talkmos.talkmos.googlesignin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.282430200722-0oqsm3d0dvfsvf381hdbv9c3mr41587p</string>
+				<string>com.googleusercontent.apps.383040801916-doqs6un4g349gumia6kh1jkm90ntv8ap</string>
 			</array>
 		</dict>
 	</array>
 	<key>GIDClientID</key>
-	<string>282430200722-0oqsm3d0dvfsvf381hdbv9c3mr41587p.apps.googleusercontent.com</string>
+	<string>383040801916-doqs6un4g349gumia6kh1jkm90ntv8ap.apps.googleusercontent.com</string>
 	<key>GIDServerClientID</key>
-	<string>282430200722-rs8qae32jq09kl27b0f4hf9fvsnaov4m.apps.googleusercontent.com</string>
+	<string>383040801916-ojkem35tcjb9d47568lh875o7f5h0sho.apps.googleusercontent.com</string>
 	<!-- audio: call media keeps flowing after the app is backgrounded.
 	     remote-notification: FCM data pushes (a call arriving) wake the app. -->
 	<key>UIBackgroundModes</key>

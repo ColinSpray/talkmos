@@ -1,4 +1,4 @@
-package com.talkmos.app
+package com.talkmos.apps
 
 import android.graphics.Bitmap
 import android.graphics.Canvas

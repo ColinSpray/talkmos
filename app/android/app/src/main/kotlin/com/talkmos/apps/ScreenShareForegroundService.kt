@@ -1,4 +1,4 @@
-package com.talkmos.app
+package com.talkmos.apps
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

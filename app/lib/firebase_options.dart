@@ -50,22 +50,20 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCCNo3WUIvv189YS1SHbD8DnLD076ydlRI',
-    appId: '1:282430200722:android:afb836529ca9f3fc70bf4b',
-    messagingSenderId: '282430200722',
-    projectId: 'talkmos-720',
-    storageBucket: 'talkmos-720.firebasestorage.app',
+    apiKey: 'AIzaSyAXO2mE2OBiEPDjZFntekW63HGEcJNcSZY',
+    appId: '1:383040801916:android:ba862afe5821393de3cdf9',
+    messagingSenderId: '383040801916',
+    projectId: 'new-talkmos',
+    storageBucket: 'new-talkmos.firebasestorage.app',
   );
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCRyQ4wcWe1kcdhWQUQohKXLeDHiTvSsvE',
-    appId: '1:282430200722:ios:37a4c8004bacf45e70bf4b',
-    messagingSenderId: '282430200722',
-    projectId: 'talkmos-720',
-    storageBucket: 'talkmos-720.firebasestorage.app',
-    androidClientId:
-        '282430200722-655pfefjg9tm7ugjdkl9ledcr1u4ksh9.apps.googleusercontent.com',
-    iosClientId:
-        '282430200722-0oqsm3d0dvfsvf381hdbv9c3mr41587p.apps.googleusercontent.com',
+    apiKey: 'AIzaSyC4tw4iDJ04aLXQtdz4-yvbB_Hro22X6Cs',
+    appId: '1:383040801916:ios:d1d2ca2abfb01280e3cdf9',
+    messagingSenderId: '383040801916',
+    projectId: 'new-talkmos',
+    storageBucket: 'new-talkmos.firebasestorage.app',
+    androidClientId: '383040801916-6d1pflabooodut9defkfbjef5jasghkl.apps.googleusercontent.com',
+    iosClientId: '383040801916-doqs6un4g349gumia6kh1jkm90ntv8ap.apps.googleusercontent.com',
     iosBundleId: 'com.talkmos.talkmos',
   );
 }

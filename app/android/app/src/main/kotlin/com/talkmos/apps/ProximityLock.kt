@@ -1,4 +1,4 @@
-package com.talkmos.app
+package com.talkmos.apps
 
 import android.content.Context
 import android.os.PowerManager

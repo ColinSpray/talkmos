@@ -122,7 +122,7 @@
             android:turnScreenOn="true"
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
-            android:taskAffinity="com.talkmos.app.call"
+            android:taskAffinity="com.talkmos.apps.call"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen" />
 
         <!-- ── Call foreground service ────────────────────────────────────────

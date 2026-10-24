@@ -405,7 +405,7 @@ class CallNotificationService {
   /// notification rather than the call. It is the difference between a call
   /// you can answer and one you only hear.
   static const MethodChannel _fsiChannel = MethodChannel(
-    'com.talkmos.app/full_screen_intent',
+    'com.talkmos.apps/full_screen_intent',
   );
 
   static Future<bool> canUseFullScreenIntent() async {

@@ -1,4 +1,4 @@
-package com.talkmos.app
+package com.talkmos.apps
 
 import android.animation.Animator
 import android.animation.ObjectAnimator
@@ -24,8 +24,8 @@ import android.widget.TextView
 class CallActivity : Activity() {
 
     companion object {
-        const val ACTION_ACCEPT = "com.talkmos.app.ACTION_ACCEPT_CALL"
-        const val ACTION_DECLINE = "com.talkmos.app.ACTION_DECLINE_CALL"
+        const val ACTION_ACCEPT = "com.talkmos.apps.ACTION_ACCEPT_CALL"
+        const val ACTION_DECLINE = "com.talkmos.apps.ACTION_DECLINE_CALL"
         var activeInstance: CallActivity? = null
 
         // Mirrors CallNotificationService._incomingNotificationId in

@@ -4,9 +4,9 @@ import 'package:flutter/services.dart';
 
 class CallActivityService {
   static const _activityChannel = MethodChannel(
-    'com.talkmos.app/call_activity',
+    'com.talkmos.apps/call_activity',
   );
-  static const _eventsChannel = MethodChannel('com.talkmos.app/call_events');
+  static const _eventsChannel = MethodChannel('com.talkmos.apps/call_events');
 
   static final StreamController<Map<String, dynamic>> _acceptController =
       StreamController<Map<String, dynamic>>.broadcast();

@@ -10,7 +10,7 @@ class CallForegroundService {
   const CallForegroundService._();
 
   static const MethodChannel _channel = MethodChannel(
-    'com.talkmos.app/call_service',
+    'com.talkmos.apps/call_service',
   );
 
   static Future<void> start() async {

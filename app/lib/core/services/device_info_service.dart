@@ -7,7 +7,7 @@ import 'package:uuid/uuid.dart';
 
 class DeviceInfoService {
   static const _keyDeviceId = 'device_session_id';
-  static const _channel = MethodChannel('com.talkmos.app/device_id');
+  static const _channel = MethodChannel('com.talkmos.apps/device_id');
 
   /// Held as one future so concurrent callers on a first run can't each
   /// generate an id and register two sessions for the one device.

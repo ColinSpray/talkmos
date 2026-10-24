@@ -8,7 +8,7 @@ class KeepAwakeService {
   static final KeepAwakeService instance = KeepAwakeService._();
 
   static const MethodChannel _channel = MethodChannel(
-    'com.talkmos.app/keep_awake',
+    'com.talkmos.apps/keep_awake',
   );
 
   bool _enabled = false;

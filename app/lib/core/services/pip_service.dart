@@ -6,7 +6,7 @@ class PipService {
   PipService._();
   static final PipService instance = PipService._();
 
-  static const MethodChannel _channel = MethodChannel('com.talkmos.app/pip');
+  static const MethodChannel _channel = MethodChannel('com.talkmos.apps/pip');
 
   final ValueNotifier<bool> isInPipMode = ValueNotifier(false);
 

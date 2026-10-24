@@ -5,7 +5,7 @@ class ScreenShareService {
   static final ScreenShareService instance = ScreenShareService._();
 
   static const MethodChannel _channel = MethodChannel(
-    'com.talkmos.app/screen_share',
+    'com.talkmos.apps/screen_share',
   );
 
   /// Completes once the foreground service is actually running. Throws if it

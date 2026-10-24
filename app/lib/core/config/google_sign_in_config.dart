@@ -6,10 +6,10 @@ class GoogleSignInConfig {
   /// Web client (`client_type: 3`). Required on Android, and the audience
   /// Firebase Auth expects on the returned ID token.
   static const String serverClientId =
-      '282430200722-rs8qae32jq09kl27b0f4hf9fvsnaov4m.apps.googleusercontent.com';
+      '383040801916-ojkem35tcjb9d47568lh875o7f5h0sho.apps.googleusercontent.com';
 
   static const String _iosClientId =
-      '282430200722-0oqsm3d0dvfsvf381hdbv9c3mr41587p.apps.googleusercontent.com';
+      '383040801916-doqs6un4g349gumia6kh1jkm90ntv8ap.apps.googleusercontent.com';
 
   /// Android reads its own client from google-services.json.
   static String? get clientId => switch (defaultTargetPlatform) {

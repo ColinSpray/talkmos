@@ -8,7 +8,7 @@ class RingtoneService {
   const RingtoneService._();
 
   static const MethodChannel _channel = MethodChannel(
-    'com.talkmos.app/ringtone',
+    'com.talkmos.apps/ringtone',
   );
 
   static Future<NotificationSoundSetting?> systemRingtone({

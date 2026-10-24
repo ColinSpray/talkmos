@@ -27,7 +27,7 @@ import UserNotifications
     // Nothing in a video call touches the screen, so without disabling the
     // idle timer iOS dims and locks the device mid-call. See KeepAwakeService.
     let keepAwake = FlutterMethodChannel(
-      name: "com.talkmos.app/keep_awake",
+      name: "com.talkmos.apps/keep_awake",
       binaryMessenger: engineBridge.applicationRegistrar.messenger()
     )
     keepAwake.setMethodCallHandler { call, result in
